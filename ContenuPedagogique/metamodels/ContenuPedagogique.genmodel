@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ContenuPedagogique/src" modelPluginID="ContenuPedagogique"
+    modelName="ContenuPedagogique" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ContenuPedagogique.ecore</foreignModel>
+  <genPackages prefix="ContenuPedagogique" disposableProviderFactory="true" ecorePackage="ContenuPedagogique.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ContenuPedagogique.ecore#//TypeUE">
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Obligatoire"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Optionnelle"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ContenuPedagogique.ecore#//TypePROGR">
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Cours_Magistral"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Travaux_Dirigés"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Travaux_Pratriques"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Contrôle_Continu"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Examen"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Rattrapage"/>
+    </genEnums>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Departement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/nom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Departement/enseignants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Departement/formations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Departement/dirige"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/TelDept"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/POBoxDept"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/acces"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Niveau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Niveau/niveau"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Niveau/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Niveau/responsablite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Niveau/ues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Niveau/specialites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Niveau/semestres"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Niveau/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Specialite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Specialite/semestres"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Specialite/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Specialite/description"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Ue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/objectif"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Ue/ressources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Ue/semestres"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Ue/EstEnseigne"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/Contenu"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ue/credit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Ue/programmations"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Enseignant">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Enseignant/responsable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/nom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Enseignant/enseigne"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Enseignant/chef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/bureau"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ressource/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ressource/lien"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Semestre">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Semestre/nom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Semestre/ues"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Formation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Formation/niveaux"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Formation/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="ContenuPedagogique.ecore#//Programmation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Programmation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Programmation/jour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Programmation/heure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Programmation/salle"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

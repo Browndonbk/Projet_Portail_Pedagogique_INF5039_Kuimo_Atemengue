@@ -1,0 +1,2197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContenuPedagogique:Departement
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ContenuPedagogique="http://www.ContenuPedagogique.com"
+    xsi:schemaLocation="http://www.ContenuPedagogique.com ../metamodels/ContenuPedagogique.ecore"
+    nom="Informatique"
+    description="L’informatique est une discipline jeune aux multiples facettes, dont les métiers sont en constante évolution et en interaction avec les sciences connexes à l'informatique. Le parcours Informatique propose à la fois des unités d'enseignement fondamentales (mathématiques, algorithmique, langages de programmation issus des principaux paradigmes, outils formels, automates, cryptographie), ainsi que des unités d'enseignement ouvrant à une professionnalisation plus immédiate (systèmes informatiques, web, bases de données, programmation et conception orientées objet, réseaux, projets de développement). La relative pluridisciplinarité des premières années est une étape indispensable. Elle garantit une formation scientifique large, une ouverture d’esprit et une qualité du socle sur lequel l’étudiant fonde ses connaissances informatiques, selon deux approches : une fondamentale et l’autre plus technique."
+    dirige="//@enseignants.0"
+    TelDept="(+237) 222 23 44 96 / (+237) 655 324 213"
+    POBoxDept="812 Yaoundé-Cameroun"
+    acces="Accès en 1ère année licence (L1) : Baccalauréat Scientifique (dans l'ordre de préférence suivant ; C, E, TIC, D avec une bonne note en mathématiques), GCE Advanced Level in two science subjects incluant les mathématiques et excluant la religion.&lt;br>Accès en 2ème année (L2) : étudiants ayant validé au moins 45 crédits de L1.&lt;br>Accès en 3ème année (L3) : étudiants ayant validé les 120 crédits de L1 et L2.&lt;br>Accès en 4ème année (M1) : étudiants ayant une licence fondamentale en informatique.&lt;br>Accès en 5ème année (M2) : étudiants ayant validé les 60 crédits en M1 avec 12 de moyenne et après une sélection.">
+  <enseignants
+      nom="Dr Aminou"
+      enseigne="//@formations.1/@niveaux.0/@ues.15 //@formations.1/@niveaux.1/@ues.7"
+      chef="/"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Pr Tchuente"
+      enseigne="//@formations.0/@niveaux.0/@ues.0 //@formations.0/@niveaux.1/@ues.7 //@formations.0/@niveaux.2/@ues.3 //@formations.1/@niveaux.1/@ues.8"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Professeur"/>
+  <enseignants
+      nom="Pr Atsa"
+      enseigne="//@formations.0/@niveaux.0/@ues.10 //@formations.1/@niveaux.0/@ues.1 //@formations.1/@niveaux.1/@ues.1"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Professeur"/>
+  <enseignants
+      responsable="//@formations.1/@niveaux.1"
+      nom="Pr Ndoumdan"
+      enseigne="//@formations.0/@niveaux.0/@ues.5 //@formations.0/@niveaux.1/@ues.6 //@formations.0/@niveaux.2/@ues.9 //@formations.0/@niveaux.2/@ues.18"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Maitre de Conférences"/>
+  <enseignants
+      responsable="//@formations.0/@niveaux.2"
+      nom="Pr Tsopze"
+      enseigne="//@formations.0/@niveaux.0/@ues.11 //@formations.1/@niveaux.0/@ues.6 //@formations.1/@niveaux.0/@ues.7 //@formations.1/@niveaux.1/@ues.0 //@formations.0/@niveaux.2/@ues.1"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Maitre de Conférences"/>
+  <enseignants
+      responsable="//@formations.0/@niveaux.0"
+      nom="Dr Kouokam"
+      enseigne="//@formations.0/@niveaux.1/@ues.4 //@formations.0/@niveaux.2/@ues.11 //@formations.1/@niveaux.0/@ues.9"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Dr Tapamo"
+      enseigne="//@formations.0/@niveaux.1/@ues.1 //@formations.0/@niveaux.2/@ues.6 //@formations.1/@niveaux.0/@ues.8 //@formations.1/@niveaux.1/@ues.4"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      responsable="//@formations.0/@niveaux.1"
+      nom="Dr Melatagia"
+      enseigne="//@formations.0/@niveaux.0/@ues.2 //@formations.0/@niveaux.1/@ues.2 //@formations.0/@niveaux.2/@ues.10 //@formations.1/@niveaux.0/@ues.0 //@formations.1/@niveaux.0/@ues.13 //@formations.1/@niveaux.1/@ues.6 //@formations.0/@niveaux.2/@ues.0"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Dr Kimbi"
+      enseigne="//@formations.0/@niveaux.1/@ues.10 //@formations.0/@niveaux.2/@ues.2 //@formations.0/@niveaux.2/@ues.14 //@formations.1/@niveaux.0/@ues.2 //@formations.1/@niveaux.0/@ues.11 //@formations.1/@niveaux.1/@ues.3"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      responsable="//@formations.1/@niveaux.0"
+      nom="Dr Monthe"
+      enseigne="//@formations.0/@niveaux.1/@ues.12 //@formations.0/@niveaux.2/@ues.15 //@formations.1/@niveaux.1/@ues.2"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Dr Olle"
+      enseigne="//@formations.0/@niveaux.1/@ues.0"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Dr Abessolo"
+      enseigne="//@formations.0/@niveaux.0/@ues.6 //@formations.0/@niveaux.2/@ues.5 //@formations.1/@niveaux.0/@ues.4"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Dr Jiomekong"
+      enseigne="//@formations.0/@niveaux.1/@ues.8 //@formations.0/@niveaux.2/@ues.4 //@formations.0/@niveaux.2/@ues.13 //@formations.1/@niveaux.0/@ues.3 //@formations.1/@niveaux.0/@ues.10"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Dr Messi"
+      enseigne="//@formations.0/@niveaux.2/@ues.7 //@formations.0/@niveaux.2/@ues.16 //@formations.1/@niveaux.0/@ues.5 //@formations.1/@niveaux.1/@ues.5"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Dr Nzokong"
+      enseigne="//@formations.0/@niveaux.2/@ues.17"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Dr Hamza"
+      enseigne="//@formations.0/@niveaux.0/@ues.8 //@formations.0/@niveaux.1/@ues.5"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Dr Domga"
+      enseigne="//@formations.0/@niveaux.0/@ues.7 //@formations.0/@niveaux.2/@ues.8"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Dr Ebele"
+      enseigne="//@formations.0/@niveaux.0/@ues.3 //@formations.0/@niveaux.0/@ues.9 //@formations.0/@niveaux.1/@ues.9 //@formations.1/@niveaux.0/@ues.14"
+      email="browndon@gmail.com"
+      bureau="R201"
+      grade="Chargé de Cours"/>
+  <enseignants
+      nom="Mr Bayem"
+      enseigne="//@formations.0/@niveaux.0/@ues.1 //@formations.0/@niveaux.1/@ues.11"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <enseignants
+      nom="Mr Nkondock"
+      enseigne="//@formations.0/@niveaux.0/@ues.4 //@formations.0/@niveaux.1/@ues.3 //@formations.0/@niveaux.2/@ues.12 //@formations.1/@niveaux.0/@ues.12 //@formations.0/@niveaux.0/@ues.12"
+      email="browndon@gmail.com"
+      bureau="R201"/>
+  <formations
+      nom="Licence Fondamentale">
+    <niveaux
+        niveau="1"
+        description="Les enseignements d'informatique de la première année de licence sont gérés par le département informatique de la Faculté des Sciences. Les informations concernant les UE des premier et second semestres sont accessibles via les liens L1 S1 et L1 S2. Ces enseignements concernent les étudiants de plusieurs portails et formations."
+        responsablite="//@enseignants.5"
+        nom="Licence 1">
+      <ues code="INF1011"
+          nom="Introduction à l’algorithmique"
+          objectif="Dans ce cours, une introduction à l'écriture des algorithmes et la description des données sont faites. Il présente une initiation à la résolution de problème simple au moyen d'algorithmes, en particulier les problèmes de recherche."
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.1"
+          Contenu="1. La résolution informatique d'un problème&lt;br>2. Éléments de base (objets et actions élémentaires)&lt;br>3. Structures alternatives&lt;br>4. Boucles (invariants, variants)&lt;br>5. Enregistrement&lt;br>6. Tableaux à 1,2 et 3 dimensions et algorithmes usuels de manipulation&lt;br>7. Procédures et fonctions&lt;br>8. Algorithmes de recherche séquentielle et dichotomique&lt;br>9. Tris élémentaires"
+          credit="6">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF1021"
+          nom="Introduction à l’Architecture des ordinateurs"
+          objectif="Ce cours va permettre aux étudiants : &lt;br>1. Comprendre les grands principes de fonctionnement d'un ordinateur ;&lt;br>2. Connaître les composants d'un ordinateur moderne et les technologies qu'ils utilisent&lt;br>3. Acquérir une connaissance à « bas niveau » de la programmation"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.18"
+          Contenu="1. Introduction (Historique sur les ordinateurs)&lt;br>2. Représentation des données&lt;br>3. Concepts de base&lt;br>4. Principe de fonctionnement d’un ordinateur&lt;br>5. Traitement des données : les processeurs&lt;br>6. Stockage des informations : les mémoires&lt;br>7. Transfert des informations : les bus&lt;br>8. Unités de contrôle&lt;br>9. Carte mère&lt;br>10. Introduction à la programmation en langage d’assemblage">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="logo.png"/>
+      </ues>
+      <ues code="INF1031"
+          nom="Programmation structurée en C"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.7">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="logo.png"/>
+        <programmations
+            jour="16h05 - 18h55"
+            heure="Lundi"
+            salle="Amphi 315"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="16h00"
+            salle="Amphi 135"/>
+      </ues>
+      <ues code="MAT1041"
+          nom="Algèbre 1"
+          objectif="Permettre à l'étudiant de maîtriser les notions algébriques de base."
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.17">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+      </ues>
+      <ues code="PHY151"
+          nom="Électronique numérique"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.19">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+      </ues>
+      <ues code="INF1051"
+          nom="Fondements Mathématiques de l'informatique"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.0"
+          EstEnseigne="//@enseignants.3">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF1042"
+          nom="Introduction aux Structures de données"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.11">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF1052"
+          nom="Introduction aux réseaux"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.16">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF1062"
+          nom="Introduction aux systèmes d’exploitation"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.15"
+          Contenu="">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="MAT1052"
+          nom="Analyse 1"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.17">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="ENG152"
+          nom="English for Mathematics and Computer Science I"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.2">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="FRA152"
+          nom="Français pour Sciences Mathématiques et Informatiques I"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.4">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="PPE1011"
+          nom="Projet Personnel Étudiant"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.0/@semestres.1"
+          EstEnseigne="//@enseignants.19">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <semestres
+          nom="L1 S1"
+          ues="//@formations.0/@niveaux.0/@ues.0 //@formations.0/@niveaux.0/@ues.1 //@formations.0/@niveaux.0/@ues.2 //@formations.0/@niveaux.0/@ues.3 //@formations.0/@niveaux.0/@ues.4 //@formations.0/@niveaux.0/@ues.5"/>
+      <semestres
+          nom="L1 S2"
+          ues="//@formations.0/@niveaux.0/@ues.6 //@formations.0/@niveaux.0/@ues.7 //@formations.0/@niveaux.0/@ues.8 //@formations.0/@niveaux.0/@ues.9 //@formations.0/@niveaux.0/@ues.10 //@formations.0/@niveaux.0/@ues.11 //@formations.0/@niveaux.0/@ues.12"/>
+    </niveaux>
+    <niveaux
+        niveau="2"
+        description="Les enseignements d'informatique de la deuxième année de licence sont gérés par le département informatique de la Faculté des Sciences. Les informations concernant les UE des premier et second semestres sont accessibles via les liens L2 S1 et L2 S2. Ces enseignements concernent les étudiants de plusieurs portails et formations."
+        responsablite="//@enseignants.7"
+        nom="Licence 2">
+      <ues code="INF2013"
+          nom="Introduction au Génie Logiciel et Système d’Information"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.10">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="logo.png"/>
+      </ues>
+      <ues code="INF2023"
+          nom="Introduction aux Bases de Données"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.6">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF2033"
+          nom="Méthodes Algorithmiques et Structures de Données"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.7">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="MAT2053"
+          nom="Algèbre 2"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.19">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF2063"
+          nom="Architecture des Ordinateurs"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.5">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF2073"
+          nom="Systèmes d’exploitation et réseaux I"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.0"
+          EstEnseigne="//@enseignants.15">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF2044"
+          nom="Statistiques et Analyse de Données"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.3">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="logo.png"/>
+      </ues>
+      <ues code="INF2054"
+          nom="Modélisation et Programmation Orientée Objet en C++ ou java"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.1">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF2064"
+          nom="Programmation Web"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.12">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="MAT2124"
+          nom="Analyse 2"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.17">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="ENG2144"
+          nom="English for Mathematics and Computer Science II"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.8">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="FRA2134"
+          nom="Français pour Sciences Mathématiques et Informatiques II"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.18">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="PPE2074"
+          nom="Projet Personnel Étudiant"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.1/@semestres.1"
+          EstEnseigne="//@enseignants.9">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <semestres
+          nom="L2 S1"
+          ues="//@formations.0/@niveaux.1/@ues.0 //@formations.0/@niveaux.1/@ues.1 //@formations.0/@niveaux.1/@ues.2 //@formations.0/@niveaux.1/@ues.3 //@formations.0/@niveaux.1/@ues.4 //@formations.0/@niveaux.1/@ues.5"/>
+      <semestres
+          nom="L2 S2"
+          ues="//@formations.0/@niveaux.1/@ues.6 //@formations.0/@niveaux.1/@ues.7 //@formations.0/@niveaux.1/@ues.8 //@formations.0/@niveaux.1/@ues.9 //@formations.0/@niveaux.1/@ues.10 //@formations.0/@niveaux.1/@ues.11 //@formations.0/@niveaux.1/@ues.12"/>
+    </niveaux>
+    <niveaux
+        niveau="3"
+        description="Les enseignements d'informatique de la troisième année de licence sont gérés par le département informatique de la Faculté des Sciences. Ce niveau est organisé en option. Les informations concernant les UE des premier et second semestres sont accessibles via les liens L3 Option S1 et L3 Option S2. Ces enseignements concernent les étudiants de plusieurs portails et formations."
+        responsablite="//@enseignants.4"
+        nom="Licence 3">
+      <ues code="INF3015"
+          nom="Conception et analyse des algorithmes"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0 //@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.7"/>
+      <ues code="INF3025"
+          nom="Calcul Scientifique"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0 //@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.4"/>
+      <ues code="ENG3035"
+          nom="English for Mathematics and Computer Science II"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0 //@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.8"/>
+      <ues code="FRA3045"
+          nom="Français pour Sciences Mathématiques et Informatiques II"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0 //@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.1"/>
+      <ues code="INF3055"
+          nom="Conception Orientée Objet"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.12"/>
+      <ues code="INF3065"
+          nom="Systèmes d’information"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.11"/>
+      <ues code="INF3075"
+          nom="Test de logiciel et assurance qualité"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.6"/>
+      <ues code="INF3115"
+          nom="Fouille de Données I"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.13"/>
+      <ues code="INF3125"
+          nom="Analyses Statistiques"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.16"/>
+      <ues code="INF3135"
+          nom="Techniques d'Optimisation I"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.3"/>
+      <ues code="INF3036"
+          nom="Bases de Données"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1 //@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.7"/>
+      <ues code="INF3046"
+          nom="Systèmes d’exploitation et Réseaux II"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1 //@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.5"/>
+      <ues code="PPE3056"
+          nom="PPE"
+          type="Fondamentale"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1 //@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.19"/>
+      <ues code="INF3176"
+          nom="Techniques de Programmation Avancée"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.12"/>
+      <ues code="INF3186"
+          nom="Systèmes d'information décisionnels"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.8"/>
+      <ues code="INF3196"
+          nom="Projet I"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.9"/>
+      <ues code="INF3236"
+          nom="Apprentissage artificiel I"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.13"/>
+      <ues code="INF3246"
+          nom="Programmation Logique"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.14"/>
+      <ues code="INF3256"
+          nom="Projet I"
+          type="Spécialisée"
+          semestres="//@formations.0/@niveaux.2/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.3"/>
+      <specialites
+          nom="GL"
+          description="Génie Logiciel et Système d'Informations">
+        <semestres
+            nom="L3 S1 GL"
+            ues="//@formations.0/@niveaux.2/@ues.1 //@formations.0/@niveaux.2/@ues.2 //@formations.0/@niveaux.2/@ues.3 //@formations.0/@niveaux.2/@ues.4 //@formations.0/@niveaux.2/@ues.5 //@formations.0/@niveaux.2/@ues.6 //@formations.0/@niveaux.2/@ues.0"/>
+        <semestres
+            nom="L3 S2 GL"
+            ues="//@formations.0/@niveaux.2/@ues.10 //@formations.0/@niveaux.2/@ues.11 //@formations.0/@niveaux.2/@ues.12 //@formations.0/@niveaux.2/@ues.13 //@formations.0/@niveaux.2/@ues.14 //@formations.0/@niveaux.2/@ues.15"/>
+      </specialites>
+      <specialites
+          nom="DS"
+          description=" Sciences de données">
+        <semestres
+            nom="L3 S1 DS"
+            ues="//@formations.0/@niveaux.2/@ues.1 //@formations.0/@niveaux.2/@ues.2 //@formations.0/@niveaux.2/@ues.3 //@formations.0/@niveaux.2/@ues.7 //@formations.0/@niveaux.2/@ues.8 //@formations.0/@niveaux.2/@ues.9 //@formations.0/@niveaux.2/@ues.0"/>
+        <semestres
+            nom="L3 S2 DS"
+            ues="//@formations.0/@niveaux.2/@ues.10 //@formations.0/@niveaux.2/@ues.11 //@formations.0/@niveaux.2/@ues.12 //@formations.0/@niveaux.2/@ues.16 //@formations.0/@niveaux.2/@ues.17 //@formations.0/@niveaux.2/@ues.18"/>
+      </specialites>
+    </niveaux>
+  </formations>
+  <formations
+      nom="Master Fondamentale">
+    <niveaux
+        niveau="4"
+        description="Les enseignements d'informatique de la quatrième année de licence sont gérés par le département informatique de la Faculté des Sciences. Ce niveau est organisé en option. Les informations concernant les UE des premier et second semestres sont accessibles via les liens M1 Option S1 et M1 Option S2. Ces enseignements concernent les étudiants de plusieurs portails et formations."
+        responsablite="//@enseignants.9"
+        nom="Master 1">
+      <ues code="INF4017"
+          nom="Complexité et algorithmique avancée"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.0 //@formations.1/@niveaux.0/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.7">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4027"
+          nom="Génie logiciel"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.0 //@formations.1/@niveaux.0/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.2">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4057"
+          nom="Architectures Logicielles"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.8">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4067"
+          nom="UML et Design Patterns"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.12">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4077"
+          nom="Programmation des terminaux mobiles"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.11">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4117"
+          nom="Fouille de données II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.13">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4127"
+          nom="Techniques d’optimisation II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.4">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4137"
+          nom="Analyse des données"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.4">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4038"
+          nom="Base de données distribuées"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.1 //@formations.1/@niveaux.0/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.6">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4048"
+          nom="Compilation"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.1 //@formations.1/@niveaux.0/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.5">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4178"
+          nom="Génie Logiciel I"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.12">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4188"
+          nom="Web sémantique et applications"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.8">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4198"
+          nom="Projet II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.0/@semestres.1"
+          EstEnseigne="//@enseignants.19">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4238"
+          nom="Systèmes experts"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.7">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4248"
+          nom="Apprentissage artificiel II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.17">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <ues code="INF4258"
+          nom="Projet II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.0/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.0">
+        <ressources
+            nom="Pré-requis du cours"
+            lien="logo.png"/>
+        <ressources
+            nom="Syllabus du cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 1 du Cours"
+            lien="images/cs-logo.png"/>
+        <ressources
+            nom="Chapitre 2 du cours"
+            lien="images/cs-logo.png"/>
+        <programmations
+            jour="Lundi"
+            heure="07h - 09h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Pratriques"
+            jour="Mercredi"
+            heure="10h05 - 12h55"
+            salle="Amphi 315"/>
+        <programmations
+            type="Travaux Dirigés"
+            jour="Vendredi"
+            heure="12h00"
+            salle="NB3"/>
+        <programmations
+            type="Contrôle Continu"
+            jour="Lundi 30 Octobre 2021"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Examen"
+            jour="Lundi 30 janvier2022"
+            heure="07h"
+            salle="Amphi 315"/>
+        <programmations
+            type="Rattrapage"
+            jour="Lundi 21 Février 2022"
+            heure="07h"
+            salle="Amphi 315"/>
+      </ues>
+      <specialites
+          nom="GL"
+          description="Génie Logiciel et Système d'Informations">
+        <semestres
+            nom="M1 S1 GL"
+            ues="//@formations.1/@niveaux.0/@ues.0 //@formations.1/@niveaux.0/@ues.1 //@formations.1/@niveaux.0/@ues.2 //@formations.1/@niveaux.0/@ues.3 //@formations.1/@niveaux.0/@ues.4"/>
+        <semestres
+            nom="M1 S2 GL"
+            ues="//@formations.1/@niveaux.0/@ues.8 //@formations.1/@niveaux.0/@ues.9 //@formations.1/@niveaux.0/@ues.10 //@formations.1/@niveaux.0/@ues.11 //@formations.1/@niveaux.0/@ues.12"/>
+      </specialites>
+      <specialites
+          nom="DS"
+          description="Sciences de données">
+        <semestres
+            nom="M1 S1 DS"
+            ues="//@formations.1/@niveaux.0/@ues.0 //@formations.1/@niveaux.0/@ues.1 //@formations.1/@niveaux.0/@ues.5 //@formations.1/@niveaux.0/@ues.6 //@formations.1/@niveaux.0/@ues.7"/>
+        <semestres
+            nom="M1 S2 DS"
+            ues="//@formations.1/@niveaux.0/@ues.8 //@formations.1/@niveaux.0/@ues.9 //@formations.1/@niveaux.0/@ues.13 //@formations.1/@niveaux.0/@ues.14 //@formations.1/@niveaux.0/@ues.15"/>
+      </specialites>
+    </niveaux>
+    <niveaux
+        niveau="5"
+        description="Les enseignements d'informatique de la cinquième année de licence sont gérés par le département informatique de la Faculté des Sciences. Ce niveau est organisé en option et se conclut par une soutenance de Master Recherche. Les informations concernant les UE des premier et second semestres sont accessibles via les liens M2 Option S1 et M2 Option S2. Ces enseignements concernent les étudiants de plusieurs portails et formations."
+        responsablite="//@enseignants.3"
+        nom="Master 2">
+      <ues code="INF5019"
+          nom="Veille scientifique et technologique"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.0 //@formations.1/@niveaux.1/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.4"/>
+      <ues code="INF5029"
+          nom="Science de données"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.0 //@formations.1/@niveaux.1/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.2"/>
+      <ues code="INF5039"
+          nom="Ingénierie Dirigée par les Modèles"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.9"/>
+      <ues code="INF5049"
+          nom="Big Data"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.8"/>
+      <ues code="INF5059"
+          nom="Génie logiciel II"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.0"
+          EstEnseigne="//@enseignants.6"/>
+      <ues code="INF5099"
+          nom="Apprentissage distribué"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.13"/>
+      <ues code="INF5109"
+          nom="Systèmes multi-agents"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.7"/>
+      <ues code="INF5119"
+          nom="Systèmes multi-agents données et applications"
+          type="Spécialisée"
+          semestres="//@formations.1/@niveaux.1/@specialites.1/@semestres.0"
+          EstEnseigne="//@enseignants.0"/>
+      <ues code="INF5009"
+          nom="Mémoire de Recherche"
+          type="Fondamentale"
+          semestres="//@formations.1/@niveaux.1/@specialites.0/@semestres.1 //@formations.1/@niveaux.1/@specialites.1/@semestres.1"
+          EstEnseigne="//@enseignants.1"/>
+      <specialites
+          nom="GL"
+          description="Génie Logiciel et Système d'Information">
+        <semestres
+            nom="M2 S1 GL"
+            ues="//@formations.1/@niveaux.1/@ues.0 //@formations.1/@niveaux.1/@ues.1 //@formations.1/@niveaux.1/@ues.2 //@formations.1/@niveaux.1/@ues.3 //@formations.1/@niveaux.1/@ues.4"/>
+        <semestres
+            nom="M2 S2 GL"
+            ues="//@formations.1/@niveaux.1/@ues.8"/>
+      </specialites>
+      <specialites
+          nom="DS"
+          description="Sciences de données">
+        <semestres
+            nom="M2 S1 DS"
+            ues="//@formations.1/@niveaux.1/@ues.0 //@formations.1/@niveaux.1/@ues.1 //@formations.1/@niveaux.1/@ues.5 //@formations.1/@niveaux.1/@ues.6 //@formations.1/@niveaux.1/@ues.7"/>
+        <semestres
+            nom="M2 S2 DS"
+            ues="//@formations.1/@niveaux.1/@ues.8"/>
+      </specialites>
+    </niveaux>
+  </formations>
+  <formations
+      nom="Licence Professionnelle"/>
+  <formations
+      nom="Master Professionnel"/>
+</ContenuPedagogique:Departement>

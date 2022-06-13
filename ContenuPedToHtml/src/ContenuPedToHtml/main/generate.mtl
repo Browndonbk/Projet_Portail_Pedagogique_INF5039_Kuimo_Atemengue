@@ -1,0 +1,537 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.ContenuPedagogique.com')]
+[**
+ * The documentation of the template generateElement.
+ * @param aDepartement
+ */]
+[template public generateHautPage(aDepartement : Departement, titre : String, chemin : String)]
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>[titre/]</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
+  <link href="[chemin/]style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header class="py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <img src="[chemin/]images/logo.png" width="64" height="64" class="img-fluid" alt="Responsive image" />
+        </div>
+        <div class="col-4 text-center" style="font-size: 23px;">
+          <a class="blog-header-logo text-dark" href="index.html">Université de Yaounde I Département d'[aDepartement.nom/]</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <a class="btn btn-sm btn-outline-primary" href="#">Connexion</a>
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+          <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">Département [aDepartement.nom/]</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="[chemin/]images/logo.png" width="200" height="100%" class="img-fluid img-thumbnail" alt="Responsive image" />
+      </div>
+    </div>
+[/template]
+
+[template public generateBasPage(a : String)]
+	<footer class="blog-footer">  <p>Université de Yaounde I</p>  </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+[/template]
+
+[template public generateElement(aDepartement : Departement)]
+[comment @main/]
+[file (aDepartement.nom+'/style.css', false, 'UTF-8')]
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #000;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+[/file]
+[file (aDepartement.nom+'/index.html', false, 'UTF-8')]
+	[generateHautPage(aDepartement, 'Site du Département '+aDepartement.nom, '')/]
+	<div id="navigation">
+	    <nav class="nav">
+	      <a class="nav-link" href="index.html">Accueil </a>
+	      [for (formation : Formation | aDepartement.formations)]
+	      <a type="button" data-target="#collapseExample[formation.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[formation.nom.replaceAll(' ','_')/]"
+	        role="button" data-toggle="collapse" class="nav-link active" href="#"> [formation.nom/] </a>
+		    [/for]
+	      <a class="nav-link" href="enseignant.html">Enseignants </a>
+	    </nav>
+	    [for (formation : Formation | aDepartement.formations)]
+	    <div class="collapse" data-parent="#navigation" aria-labelledby="[formation.nom.replaceAll(' ','_')/]" id="collapseExample[formation.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+	          [for (niv : Niveau | formation.niveaux)]
+	              <a class="nav-link" href="niveau/[niv.nom.replaceAll(' ','_')/].html">[niv.nom/]</a>
+	          [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	</div>
+    <hr/>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <div class="blog-post">
+            <h3>Description du Departement et son programme</h3>
+            <p style="text-align:justify">
+              [aDepartement.description/]
+            </p>
+            <hr/>
+            <h3>Responsable du departement</h3>
+            <p style="text-align:justify">
+              [aDepartement.dirige.nom/]
+            </p>
+			<hr/>
+            <h3>Contact(s) du departement</h3>
+            <p style="text-align:justify">
+              Tel : [aDepartement.TelDept/] <br/>
+			  PO Box : [aDepartement.POBoxDept/]
+            </p>
+          </div>
+        </div>
+        <!-- /.blog-main -->
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">Conditions d'accès</h4>
+            <p class="mb-0" style="text-align:justify">[aDepartement.acces/]</p>
+          </div>
+        </aside>
+        <!-- /.blog-sidebar -->
+      </div>
+      <!-- /.row -->
+    </main>
+    <!-- /.container -->
+    [generateBasPage('')/]
+[/file]
+[/template]
+
+[template public generateNiveau(aNiveau : Niveau)]
+[comment @main/]
+[file (aNiveau.eContainer(Departement).nom+'/niveau/'+aNiveau.nom.replaceAll(' ','_')+'.html', false, 'UTF-8')]
+	[generateHautPage(aNiveau.eContainer(Departement), aNiveau.nom, '../')/]
+	<div id="navigation">
+	    <nav class="nav">
+	      <a class="nav-link" href="../index.html">Accueil </a>
+	      [for (formation : Formation | aNiveau.eContainer(Departement).formations)]
+	      <a type="button" data-target="#collapseExample[formation.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[formation.nom.replaceAll(' ','_')/]"
+	        role="button" data-toggle="collapse" class="nav-link active" href="#"> [formation.nom/] </a>
+		    [/for]
+	      <a class="nav-link" href="../enseignant.html">Enseignants </a>
+	    </nav>
+	    [for (formation : Formation | aNiveau.eContainer(Departement).formations)]
+	    <div class="collapse" data-parent="#navigation" aria-labelledby="[formation.nom.replaceAll(' ','_')/]" id="collapseExample[formation.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+	          [for (niv : Niveau | formation.niveaux)]
+	              <a class="nav-link" href="[niv.nom.replaceAll(' ','_')/].html">[niv.nom/]</a>
+	          [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	</div>
+    <hr/>
+    <h2>[aNiveau.eContainer(Formation).nom/] : [aNiveau.nom/]</h2>
+    <hr/>
+    <div id="navigation2">
+      <nav class="nav">
+		[if (aNiveau.specialites->size()=0)]
+			[for (sem : Semestre | aNiveau.semestres)]
+			<a type="button" data-target="#collapseExample[sem.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[sem.nom.replaceAll(' ','_')/]" role="button" data-toggle="collapse" class="nav-link active" href="#">[sem.nom/]</a>
+			[/for]
+		[else]
+			[for (spe : Specialite | aNiveau.specialites)]
+				[for (sem : Semestre | spe.semestres)]
+				<a type="button" data-target="#collapseExample[sem.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[sem.nom.replaceAll(' ','_')/]" role="button" data-toggle="collapse" class="nav-link active" href="#">[sem.nom/]</a>
+				[/for]
+			[/for]
+		[/if]
+      </nav>
+	[if (aNiveau.specialites->size()=0)]
+		[for (sem : Semestre | aNiveau.semestres)]
+		<div class="collapse" data-parent="#navigation2" id="collapseExample[sem.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+			  [for (ue : Ue | sem.ues)]
+	          <a class="nav-link" href="../ue/[ue.code/].html">[ue.code/]</a>
+			  [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	[else]
+		[for (spe : Specialite | aNiveau.specialites)]
+			[for (sem : Semestre | spe.semestres)]
+			<div class="collapse" data-parent="#navigation2" id="collapseExample[sem.nom.replaceAll(' ','_')/]">
+		      <div class="card card-body">
+		        <nav class="nav">
+				  [for (ue : Ue | sem.ues)]
+		          <a class="nav-link" href="../ue/[ue.code/].html">[ue.code/]</a>
+				  [/for]
+		        </nav>
+		      </div>
+		    </div>
+			[/for]
+		[/for]
+	[/if]
+  </div>
+  <hr/>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div>
+          <h3>Description du niveau</h3>
+          <p style="text-align:justify">
+            [aNiveau.description/]
+          </p>
+        </div>
+      </div>
+      <!-- /.blog-main -->
+      <aside class="col-md-4">
+        <div class="p-3 mb-3 bg-light rounded">
+          <h4 class="font-italic">Responsable du niveau</h4>
+          <p class="mb-0" style="text-align:justify">
+			[aNiveau.responsablite.nom/]
+          </p>
+        </div>
+        </div>
+      </aside>
+      <!-- /.blog-sidebar -->
+    </div>
+    <!-- /.row -->
+  </main>
+  <!-- /.container -->
+  [generateBasPage('')/]
+[/file]
+[/template]
+
+[template public generateUe(aUe : Ue)]
+[comment @main/]
+[file (aUe.eContainer(Departement).nom+'/ue/'+aUe.code+'.html', false, 'UTF-8')]
+	[generateHautPage(aUe.eContainer(Departement), aUe.nom, '../')/]
+	<div id="navigation">
+	    <nav class="nav">
+	      <a class="nav-link" href="../index.html">Accueil </a>
+	      [for (formation : Formation | aUe.eContainer(Departement).formations)]
+	      <a type="button" data-target="#collapseExample[formation.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[formation.nom.replaceAll(' ','_')/]"
+	        role="button" data-toggle="collapse" class="nav-link active" href="#"> [formation.nom/] </a>
+		    [/for]
+	      <a class="nav-link" href="../enseignant.html">Enseignants </a>
+	    </nav>
+	    [for (formation : Formation | aUe.eContainer(Departement).formations)]
+	    <div class="collapse" data-parent="#navigation" aria-labelledby="[formation.nom.replaceAll(' ','_')/]" id="collapseExample[formation.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+	          [for (niv : Niveau | formation.niveaux)]
+	              <a class="nav-link" href="../niveau/[niv.nom.replaceAll(' ','_')/].html">[niv.nom/]</a>
+	          [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	</div>
+	<hr/>
+	<h2> [aUe.eContainer(Formation).nom/] :  [aUe.eContainer(Niveau).nom/] </h2>
+    <hr/>
+	<div id="navigation2">
+      <nav class="nav">
+		[if (aUe.eContainer(Niveau).specialites->size()=0)]
+			[for (sem : Semestre | aUe.eContainer(Niveau).semestres)]
+			<a type="button" data-target="#collapseExample[sem.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[sem.nom.replaceAll(' ','_')/]" role="button" data-toggle="collapse" class="nav-link active" href="#">[sem.nom/]</a>
+			[/for]
+		[else]
+			[for (spe : Specialite | aUe.eContainer(Niveau).specialites)]
+				[for (sem : Semestre | spe.semestres)]
+				<a type="button" data-target="#collapseExample[sem.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[sem.nom.replaceAll(' ','_')/]" role="button" data-toggle="collapse" class="nav-link active" href="#">[sem.nom/]</a>
+				[/for]
+			[/for]
+		[/if]
+      </nav>
+	[if (aUe.eContainer(Niveau).specialites->size()=0)]
+		[for (sem : Semestre | aUe.eContainer(Niveau).semestres)]
+		<div class="collapse" data-parent="#navigation2" id="collapseExample[sem.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+			  [for (ue : Ue | sem.ues)]
+	          <a class="nav-link" href="../ue/[ue.code/].html">[ue.code/]</a>
+			  [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	[else]
+		[for (spe : Specialite | aUe.eContainer(Niveau).specialites)]
+			[for (sem : Semestre | spe.semestres)]
+			<div class="collapse" data-parent="#navigation2" id="collapseExample[sem.nom.replaceAll(' ','_')/]">
+		      <div class="card card-body">
+		        <nav class="nav">
+				  [for (ue : Ue | sem.ues)]
+		          <a class="nav-link" href="../ue/[ue.code/].html">[ue.code/]</a>
+				  [/for]
+		        </nav>
+		      </div>
+		    </div>
+			[/for]
+		[/for]
+	[/if]
+	</div>
+  	[if (aUe.eContainer(Niveau).specialites->size()>0 and aUe.semestres.eContainer(Specialite)->size()=1)]
+		<hr/>
+		<h3> Spécialité : [aUe.semestres.eContainer(Specialite).description/] </h3>
+	[/if]
+    <hr/>
+    <h4> Semestre :
+	  [if (aUe.semestres->size()=1)]
+	  	[aUe.semestres.nom/]
+	  [else]
+		[aUe.semestres->first().nom.substring(1, 5)/]
+      [/if]
+ 	  </h4>
+    <hr/>
+    <h5>[aUe.code.toUpper()/] : [aUe.nom/]</h5>
+  </div>
+  <hr />
+  <main role="main" class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#description" role="tab" aria-controls="home" aria-selected="true">Description</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#type" role="tab" aria-controls="profile" aria-selected="false">Type</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#responsable" role="tab" aria-controls="contact" aria-selected="false">Responsable</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#contenu" role="tab" aria-controls="profile" aria-selected="false">Contenu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#emploi" role="tab" aria-controls="contact" aria-selected="false">Calendrier</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#ressources" role="tab" aria-controls="contact" aria-selected="false">Ressources</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="home-tab">
+        <h4 style="margin-block: 20px;">Objectifs de l'unité d'enseignement</h4>
+        <p style="text-align:justify">
+		  [if (aUe.objectif.oclIsUndefined())]
+          	<p style="text-align:justify"> Aucun objectif associé </p>
+		  [else]
+          	[aUe.objectif/]
+          [/if]
+        </p>
+		<h4 style="margin-block: 20px;">Nombre de Crédits de l'unité d'enseignement</h4>
+        <p style="text-align:justify">
+          [aUe.credit/] crédits
+        </p>
+      </div>
+      <div class="tab-pane fade" id="type" role="tabpanel" aria-labelledby="profile-tab">
+        <h4 style="margin-block: 20px;">Type de l'unité d'enseignement</h4>
+        <p style="text-align:justify"> [aUe.type/] </p>
+      </div>
+      <div class="tab-pane fade" id="responsable" role="tabpanel" aria-labelledby="contact-tab">
+        <h4 style="margin-block: 20px;">Enseignant de l'unité d'enseignement</h4>
+		[if (aUe.EstEnseigne.oclIsUndefined())]
+		  	<p style="text-align:justify"> Aucun responsable associé </p>
+		[else]
+        <p>
+		  <table style="text-align:justify;">
+          	<tr><td>Nom</td><td> : </td><td style="font-weight: bold;">[aUe.EstEnseigne.nom/]</td></tr>
+          	<tr><td>Email</td><td> : </td><td style="font-weight: bold;">[aUe.EstEnseigne.email/]</td></tr>
+          	<tr><td>Bureau</td><td> : </td><td style="font-weight: bold;">[aUe.EstEnseigne.bureau/]</td></tr>
+		  </table>
+        </p>
+		[/if]
+      </div>
+      <div class="tab-pane fade" id="contenu" role="tabpanel" aria-labelledby="home-tab">
+        <h4 style="margin-block: 20px;">Plan du contenu de l'unité d'enseignement</h4>
+        <p style="text-align:justify">
+          [if (aUe.Contenu.oclIsUndefined())]
+          	<p style="text-align:justify"> Aucun contenu associé </p>
+		  [else]
+          	[aUe.Contenu/]
+          [/if]
+        </p>
+      </div>
+      <div class="tab-pane fade" id="emploi" role="tabpanel" aria-labelledby="profile-tab">
+	  [if (aUe.programmations->size()=0)]
+	  	<h4 style="margin-block: 20px;">Aucune programmation disponible</h4>
+	  [else]
+		[let nbreprog : Integer = aUe.programmations->size()]
+			[for (pro : Programmation | aUe.programmations)]
+				[if (i=1 or i=4)]
+	  	<div class="row">
+				[/if]
+	      <div class="col-md-4 blog-main">
+	        <div class="blog-post">
+				<h4 style="margin-block: 20px;">[pro.type/]</h4>
+		        <p>
+				  <table style="text-align:justify;">
+		          	<tr><td>Jour</td><td> : </td><td style="font-weight: bold;">[pro.jour/]</td></tr>
+		          	<tr><td>Heure</td><td> : </td><td style="font-weight: bold;">[pro.heure/]</td></tr>
+		          	<tr><td>Salle</td><td> : </td><td style="font-weight: bold;">[pro.salle/]</td></tr>
+				  </table>
+		        </p>
+	        </div>
+	      </div>
+				[if (i=3 or i=nbreprog)]
+		 </div>
+				[/if]
+			[/for]
+		[/let]
+	  [/if]
+      </div>
+      <div class="tab-pane fade" id="ressources" role="tabpanel" aria-labelledby="contact-tab">
+        <h4 style="margin-block: 20px;">Fichiers de l'unité d'enseignement</h4>
+        [if (aUe.ressources->size()=0)]
+		  	<p class="mb-0" style="text-align:justify">
+	            <a class="nav-link" href="#">Aucune ressource disponible</a>
+	        </p>
+        [/if]
+        [if (aUe.ressources->size()>0)]
+          [for (res : Ressource | aUe.ressources)]
+              <p class="mb-0" style="text-align:justify">
+                <a class="nav-link" href="../ressources/[res.lien/]" target="_blank">[res.nom/]</a>
+              </p>
+          [/for]
+        [/if]
+      </div>
+    </div>
+  </main>
+  <!-- /.container -->
+  [generateBasPage('')/]
+[/file]
+[/template]
+
+[template public generateEnseignant(aDepartement : Departement)]
+[comment @main/]
+[file (aDepartement.nom+'/enseignant.html', false, 'UTF-8')]
+	[generateHautPage(aDepartement, 'Enseignant du Département', '')/]
+	<div id="navigation">
+	    <nav class="nav">
+	      <a class="nav-link" href="index.html">Accueil </a>
+	      [for (formation : Formation | aDepartement.formations)]
+	      <a type="button" data-target="#collapseExample[formation.nom.replaceAll(' ','_')/]" aria-expanded="false" aria-controls="#collapseExample[formation.nom.replaceAll(' ','_')/]"
+	        role="button" data-toggle="collapse" class="nav-link active" href="#"> [formation.nom/] </a>
+		    [/for]
+	      <a class="nav-link" href="enseignant.html">Enseignants </a>
+	    </nav>
+	    [for (formation : Formation | aDepartement.formations)]
+	    <div class="collapse" data-parent="#navigation" aria-labelledby="[formation.nom.replaceAll(' ','_')/]" id="collapseExample[formation.nom.replaceAll(' ','_')/]">
+	      <div class="card card-body">
+	        <nav class="nav">
+	          [for (niv : Niveau | formation.niveaux)]
+	              <a class="nav-link" href="niveau/[niv.nom.replaceAll(' ','_')/].html">[niv.nom/]</a>
+	          [/for]
+	        </nav>
+	      </div>
+	    </div>
+		[/for]
+	</div>
+    <hr/>
+    <main role="main" class="container">
+      <div class="carousel slide" data-ride="carousel" id="myCarouselEnseignant">
+		<ol class="carousel-indicators">
+			[for (ens : Enseignant | aDepartement.enseignants)]
+				[if (i=1)]
+          			<li class="rounded bg-dark" data-target="#myCarouselEnseignant" data-slide-to="[((i - i.mod(3))/3).round()/]" class="active"></li>
+				[else]
+					[if (i<>1 and i.mod(3)=1)]
+	        			<li class="rounded bg-dark" data-target="#myCarouselEnseignant" data-slide-to="[((i - i.mod(3))/3).round()/]"></li>
+					[/if]
+				[/if]
+			[/for]
+		</ol>
+        <div class="carousel-inner">
+	[for (ens : Enseignant | aDepartement.enseignants)]
+		[if (i=1)]
+          <div class="carousel-item active">
+			<div class="row" style="margin-bottom: 50px;" class="d-block w-100">
+        		<div class="col-md-3" style="margin-left: 140px;">
+		[else]
+			[if (i<>1 and i.mod(3)=1)]
+	          <div class="carousel-item">
+				<div class="row" style="margin-bottom: 50px;">
+        			<div class="col-md-3" style="margin-left: 140px;">
+			[else]
+        			<div class="col-md-3">
+			[/if]
+		[/if]
+          <div class="card" style="width: auto; height: auto;">
+            <div align="center"><img class="card-img-top" src="images/user.png" alt="Card image cap" style="width: 200px;"></div>
+            <div class="card-body">
+              <h5 class="card-title">[ens.nom/]
+				[if (ens.chef.oclIsUndefined()=false)]
+					 (Chef)
+				[/if]
+			  </h5>
+              <hr />
+			  <h6 class="card-subtitle mb-2 text-muted">[ens.grade/] </h6>
+              <hr />
+              <h6 class="card-subtitle mb-2 text-muted">[ens.email/] </h6>
+              <hr />
+              <h6 class="card-subtitle mb-2 text-muted">Bureau : [ens.bureau/] </h6>
+              [if (ens.responsable.oclIsUndefined() = false)]
+              	<hr />
+              	<h6 class="card-subtitle mb-2 text-muted">Responsable de [ens.responsable.nom/] </h6>
+              [/if]
+          	  <hr />
+          	  <h6 class="card-subtitle mb-2 text-muted">Responsable de [ens.enseigne->size()/] UE(s)
+			  	[for (ue : Ue | ens.enseigne) before (' : <br>') separator ('-')]
+			  		[ue.code/]
+			  	[/for]
+			  </h6>
+            </div>
+          </div>
+        </div>
+		[if (i.mod(3)=0 or i=aDepartement.enseignants->size())]
+				</div>
+			</div>
+		[/if]
+	[/for]
+          <a href="#myCarouselEnseignant" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon rounded bg-dark"></span>
+          </a>
+          <a href="#myCarouselEnseignant" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon rounded bg-dark"></span>
+          </a>
+        </div>
+      </div>
+      <!-- /.row -->
+    </main>
+    <!-- /.container -->
+    [generateBasPage('')/]
+[/file]
+[/template]

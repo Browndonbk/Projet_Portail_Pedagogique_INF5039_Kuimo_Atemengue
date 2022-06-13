@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ContenuPedagogique" nsURI="http://www.ContenuPedagogique.com"
+    nsPrefix="ContenuPedagogique">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Departement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enseignants" lowerBound="1"
+        upperBound="-1" eType="#//Enseignant" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formations" lowerBound="1"
+        upperBound="-1" eType="#//Formation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dirige" lowerBound="1"
+        eType="#//Enseignant" eOpposite="#//Enseignant/chef"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TelDept" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="POBoxDept" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acces" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Niveau">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="NivNomDiff SiSemPasSpe SiSpePasSem SiSemAlors2 SiSpeNSemDSpe PasSpeUe1Sem SiSpeUeFon1SemPSpe SemLieUeMemeNiv UeLieSemMemeNiv UeSpeLieSemSpeNiv"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="NivNomDiff" value="Niveau.allInstances() -> forAll(n1, n2 | n1 &lt;> n2 implies n1.nom &lt;> n2.nom)"/>
+      <details key="SiSemPasSpe" value="semestres->size()>0 implies specialites->size()=0"/>
+      <details key="SiSpePasSem" value="specialites->size()>0 implies semestres->size()=0"/>
+      <details key="SiSemAlors2" value="specialites->size()=0 implies semestres->size()=2"/>
+      <details key="SiSpeNSemDSpe" value="specialites->size()>0 implies self.specialites.semestres->size()=2*self.specialites->size()"/>
+      <details key="PasSpeUe1Sem" value="specialites->size()=0 implies self.ues -> forAll(ue | ue.semestres->size()=1)"/>
+      <details key="SiSpeUeFon1SemPSpe" value="specialites->size()>0 implies self.ues -> forAll(ue | &#xA;&#x9;&#x9;&#x9;ue.type=TypeUE::Fondamentale implies&#xA;&#x9;&#x9;&#x9;&#x9;self.specialites -> forAll(spe |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;spe.semestres -> one(sem | sem.ues -> includes(ue))&#xA;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;)"/>
+      <details key="SemLieUeMemeNiv" value="&#xA;&#x9;&#x9;&#x9;if specialites->size()=0 then&#xA;&#x9;&#x9;&#x9;&#x9;  self.semestres.ues -> forAll(ue | self.ues -> includes(ue))&#xA;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;self.specialites.semestres.ues -> forAll(ue | self.ues -> includes(ue)) &#xA;&#x9;&#x9;&#x9;endif"/>
+      <details key="UeLieSemMemeNiv" value="&#xA;&#x9;&#x9;&#x9;if specialites->size()=0 then&#xA;&#x9;&#x9;&#x9;&#x9;self.ues -> forAll( ue |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ue.semestres -> forAll(sem | self.semestres -> includes(sem))&#xA;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;self.ues -> forAll( ue |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ue.semestres -> forAll(sem | self.specialites.semestres -> includes(sem))&#xA;&#x9;&#x9;&#x9;&#x9;) &#xA;&#x9;&#x9;&#x9;endif"/>
+      <details key="UeSpeLieSemSpeNiv" value="&#xA;&#x9;&#x9;&#x9;self.ues -> forAll( ue |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ue.type=TypeUE::Specialisee implies&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ue.semestres -> forAll(sem | self.specialites.semestres -> includes(sem))&#xA;&#x9;&#x9;&#x9;&#x9;)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="niveau" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsablite" lowerBound="1"
+        eType="#//Enseignant" eOpposite="#//Enseignant/responsable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ues" lowerBound="1" upperBound="-1"
+        eType="#//Ue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialites" upperBound="-1"
+        eType="#//Specialite" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" upperBound="-1"
+        eType="#//Semestre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Specialite">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="NbreSem2 UeSpeAM1"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="NbreSem2" value="semestres->size()=2"/>
+      <details key="UeSpeAM1" value="self.semestres.ues -> exists(ue | ue.type=TypeUE::Specialisee)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" lowerBound="1"
+        upperBound="-1" eType="#//Semestre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ue">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="UeCodeDiff UeSpe1Sem"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="UeCodeDiff" value="Ue.allInstances() -> forAll(ue1, ue2 | ue1 &lt;> ue2 implies ue1.code &lt;> ue2.code)"/>
+      <details key="UeSpe1Sem" value="self.type=TypeUE::Specialisee implies self.semestres->size()=1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectif" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TypeUE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressources" upperBound="-1"
+        eType="#//Ressource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" lowerBound="1"
+        upperBound="-1" eType="#//Semestre" eOpposite="#//Semestre/ues"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EstEnseigne" lowerBound="1"
+        eType="#//Enseignant" eOpposite="#//Enseignant/enseigne"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Contenu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credit" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programmations" upperBound="-1"
+        eType="#//Programmation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enseignant">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsable" eType="#//Niveau"
+        eOpposite="#//Niveau/responsablite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enseigne" upperBound="-1"
+        eType="#//Ue" eOpposite="#//Ue/EstEnseigne"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chef" eType="#//Departement"
+        eOpposite="#//Departement/dirige"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bureau" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grade" eType="#//TypeGRADE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ressource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lien" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Semestre">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ues" lowerBound="1" upperBound="-1"
+        eType="#//Ue" eOpposite="#//Ue/semestres"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeUE">
+    <eLiterals name="Optionnelle" value="1"/>
+    <eLiterals name="Specialisee" value="2" literal="Spécialisée"/>
+    <eLiterals name="Fondamentale" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Formation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="FormNomDiff"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="FormNomDiff" value="Formation.allInstances() -> forAll(p1, p2 | p1 &lt;> p2 implies p1.nom &lt;> p2.nom)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="niveaux" upperBound="-1"
+        eType="#//Niveau" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypePROGR">
+    <eLiterals name="Cours_Magistral" literal="Cours Magistral"/>
+    <eLiterals name="Travaux_Dirigés" value="1" literal="Travaux Dirigés"/>
+    <eLiterals name="Travaux_Pratriques" value="2" literal="Travaux Pratriques"/>
+    <eLiterals name="Contrôle_Continu" value="3" literal="Contrôle Continu"/>
+    <eLiterals name="Examen" value="4"/>
+    <eLiterals name="Rattrapage" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Programmation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TypePROGR"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heure" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeGRADE">
+    <eLiterals name="Assistant" literal="Assistant"/>
+    <eLiterals name="Chargé_de_Cours" value="1" literal="Chargé de Cours"/>
+    <eLiterals name="Maitre_de_Conférences" value="2" literal="Maitre de Conférences"/>
+    <eLiterals name="Professeur" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>
