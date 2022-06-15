@@ -4,7 +4,7 @@
     <semanticResources>ContenuPedagogique.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Vx4yQOMjEeyjpPJYgaP5Uw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ay-tkOMjEeyjpPJYgaP5Uw" name="ContenuPedagogique class diagram" repPath="#_ax8LwOMjEeyjpPJYgaP5Uw" changeId="be6be368-9d28-42cd-98ee-b5a8537056a8">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ay-tkOMjEeyjpPJYgaP5Uw" name="ContenuPedagogique class diagram" repPath="#_ax8LwOMjEeyjpPJYgaP5Uw" changeId="0c6b873d-799f-4dc0-9753-bdf5359a2c2f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ContenuPedagogique.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -833,7 +833,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_K96RVuMuEeyyM4PQzwyV-Q" name="[1..*] semestres" sourceNode="_3bx6AOMjEeyjpPJYgaP5Uw" targetNode="_FQEXAOMpEeyjpPJYgaP5Uw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_K96RVuMuEeyyM4PQzwyV-Q" name="[2..2] semestres" sourceNode="_3bx6AOMjEeyjpPJYgaP5Uw" targetNode="_FQEXAOMpEeyjpPJYgaP5Uw">
       <target xmi:type="ecore:EReference" href="ContenuPedagogique.ecore#//Specialite/semestres"/>
       <semanticElements xmi:type="ecore:EReference" href="ContenuPedagogique.ecore#//Specialite/semestres"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_QnZpYOMuEeyyM4PQzwyV-Q" description="_Ovu9IOMuEeyyM4PQzwyV-Q" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -988,13 +988,9 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_QEYEcOSlEeyyM4PQzwyV-Q" name="[0..*] semestres" sourceNode="_va-sUOMjEeyjpPJYgaP5Uw" targetNode="_FQEXAOMpEeyjpPJYgaP5Uw">
       <target xmi:type="ecore:EReference" href="ContenuPedagogique.ecore#//Niveau/semestres"/>
       <semanticElements xmi:type="ecore:EReference" href="ContenuPedagogique.ecore#//Niveau/semestres"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_QEYrgOSlEeyyM4PQzwyV-Q" description="_AH2c0OMlEeyjpPJYgaP5Uw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_QEYrguSlEeyyM4PQzwyV-Q" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_QEYrgeSlEeyyM4PQzwyV-Q" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_xIC4puzHEeyW7IZgDQtu_A" description="_AH2c0OMlEeyjpPJYgaP5Uw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_xIC4qOzHEeyW7IZgDQtu_A" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_xIC4p-zHEeyW7IZgDQtu_A" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>

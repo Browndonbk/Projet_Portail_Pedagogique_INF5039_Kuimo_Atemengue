@@ -25,14 +25,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Niveau">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="NivNomDiff SiSemPasSpe SiSpePasSem SiSemAlors2 SiSpeNSemDSpe PasSpeUe1Sem SiSpeUeFon1SemPSpe SemLieUeMemeNiv UeLieSemMemeNiv UeSpeLieSemSpeNiv"/>
+      <details key="constraints" value="NivNomDiff SiSemPasSpe SiSpePasSem SiSemAlors2 PasSpeUe1Sem SiSpeUeFon1SemPSpe SemLieUeMemeNiv UeLieSemMemeNiv UeSpeLieSemSpeNiv"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="NivNomDiff" value="Niveau.allInstances() -> forAll(n1, n2 | n1 &lt;> n2 implies n1.nom &lt;> n2.nom)"/>
       <details key="SiSemPasSpe" value="semestres->size()>0 implies specialites->size()=0"/>
       <details key="SiSpePasSem" value="specialites->size()>0 implies semestres->size()=0"/>
-      <details key="SiSemAlors2" value="specialites->size()=0 implies semestres->size()=2"/>
-      <details key="SiSpeNSemDSpe" value="specialites->size()>0 implies self.specialites.semestres->size()=2*self.specialites->size()"/>
+      <details key="SiSemAlors2" value="specialites->oclIsUndefined() and semestres->oclIsUndefined()=false implies semestres->size()=2"/>
       <details key="PasSpeUe1Sem" value="specialites->size()=0 implies self.ues -> forAll(ue | ue.semestres->size()=1)"/>
       <details key="SiSpeUeFon1SemPSpe" value="specialites->size()>0 implies self.ues -> forAll(ue | &#xA;&#x9;&#x9;&#x9;ue.type=TypeUE::Fondamentale implies&#xA;&#x9;&#x9;&#x9;&#x9;self.specialites -> forAll(spe |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;spe.semestres -> one(sem | sem.ues -> includes(ue))&#xA;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;)"/>
       <details key="SemLieUeMemeNiv" value="&#xA;&#x9;&#x9;&#x9;if specialites->size()=0 then&#xA;&#x9;&#x9;&#x9;&#x9;  self.semestres.ues -> forAll(ue | self.ues -> includes(ue))&#xA;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;self.specialites.semestres.ues -> forAll(ue | self.ues -> includes(ue)) &#xA;&#x9;&#x9;&#x9;endif"/>
@@ -54,14 +53,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Specialite">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="NbreSem2 UeSpeAM1"/>
+      <details key="constraints" value="UeSpeAM1"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="NbreSem2" value="semestres->size()=2"/>
       <details key="UeSpeAM1" value="self.semestres.ues -> exists(ue | ue.type=TypeUE::Specialisee)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" lowerBound="1"
-        upperBound="-1" eType="#//Semestre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" lowerBound="2"
+        upperBound="2" eType="#//Semestre" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
