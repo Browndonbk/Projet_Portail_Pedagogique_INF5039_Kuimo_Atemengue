@@ -83,6 +83,8 @@ public class ContenuPedagogiqueFactoryImpl extends EFactoryImpl implements Conte
 				return createTypeUEFromString(eDataType, initialValue);
 			case ContenuPedagogiquePackage.TYPE_PROGR:
 				return createTypePROGRFromString(eDataType, initialValue);
+			case ContenuPedagogiquePackage.TYPE_GRADE:
+				return createTypeGRADEFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -100,6 +102,8 @@ public class ContenuPedagogiqueFactoryImpl extends EFactoryImpl implements Conte
 				return convertTypeUEToString(eDataType, instanceValue);
 			case ContenuPedagogiquePackage.TYPE_PROGR:
 				return convertTypePROGRToString(eDataType, instanceValue);
+			case ContenuPedagogiquePackage.TYPE_GRADE:
+				return convertTypeGRADEToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -232,6 +236,26 @@ public class ContenuPedagogiqueFactoryImpl extends EFactoryImpl implements Conte
 	 * @generated
 	 */
 	public String convertTypePROGRToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeGRADE createTypeGRADEFromString(EDataType eDataType, String initialValue) {
+		TypeGRADE result = TypeGRADE.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTypeGRADEToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

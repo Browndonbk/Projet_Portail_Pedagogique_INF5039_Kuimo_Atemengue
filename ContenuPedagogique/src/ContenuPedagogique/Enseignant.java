@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link ContenuPedagogique.Enseignant#getChef <em>Chef</em>}</li>
  *   <li>{@link ContenuPedagogique.Enseignant#getEmail <em>Email</em>}</li>
  *   <li>{@link ContenuPedagogique.Enseignant#getBureau <em>Bureau</em>}</li>
+ *   <li>{@link ContenuPedagogique.Enseignant#getGrade <em>Grade</em>}</li>
  * </ul>
  *
  * @see ContenuPedagogique.ContenuPedagogiquePackage#getEnseignant()
@@ -155,5 +156,30 @@ public interface Enseignant extends EObject {
 	 * @generated
 	 */
 	void setBureau(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Grade</b></em>' attribute.
+	 * The literals are from the enumeration {@link ContenuPedagogique.TypeGRADE}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Grade</em>' attribute.
+	 * @see ContenuPedagogique.TypeGRADE
+	 * @see #setGrade(TypeGRADE)
+	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getEnseignant_Grade()
+	 * @model
+	 * @generated
+	 */
+	TypeGRADE getGrade();
+
+	/**
+	 * Sets the value of the '{@link ContenuPedagogique.Enseignant#getGrade <em>Grade</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Grade</em>' attribute.
+	 * @see ContenuPedagogique.TypeGRADE
+	 * @see #getGrade()
+	 * @generated
+	 */
+	void setGrade(TypeGRADE value);
 
 } // Enseignant

@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TypeUE implements Enumerator {
 	/**
-	 * The '<em><b>Obligatoire</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #OBLIGATOIRE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	OBLIGATOIRE(0, "Obligatoire", "Obligatoire"),
-
-	/**
 	 * The '<em><b>Optionnelle</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,18 +26,23 @@ public enum TypeUE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OPTIONNELLE(1, "Optionnelle", "Optionnelle");
-
-	/**
-	 * The '<em><b>Obligatoire</b></em>' literal value.
+	OPTIONNELLE(1, "Optionnelle", "Optionnelle"), /**
+	 * The '<em><b>Specialisee</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OBLIGATOIRE
-	 * @model name="Obligatoire"
+	 * @see #SPECIALISEE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OBLIGATOIRE_VALUE = 0;
+	SPECIALISEE(2, "Specialisee", "Sp\u00e9cialis\u00e9e"), /**
+	 * The '<em><b>Fondamentale</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FONDAMENTALE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	FONDAMENTALE(3, "Fondamentale", "Fondamentale");
 
 	/**
 	 * The '<em><b>Optionnelle</b></em>' literal value.
@@ -61,6 +56,28 @@ public enum TypeUE implements Enumerator {
 	public static final int OPTIONNELLE_VALUE = 1;
 
 	/**
+	 * The '<em><b>Specialisee</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SPECIALISEE
+	 * @model name="Specialisee" literal="Sp\351cialis\351e"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SPECIALISEE_VALUE = 2;
+
+	/**
+	 * The '<em><b>Fondamentale</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FONDAMENTALE
+	 * @model name="Fondamentale"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FONDAMENTALE_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Type UE</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,8 +85,9 @@ public enum TypeUE implements Enumerator {
 	 */
 	private static final TypeUE[] VALUES_ARRAY =
 		new TypeUE[] {
-			OBLIGATOIRE,
 			OPTIONNELLE,
+			SPECIALISEE,
+			FONDAMENTALE,
 		};
 
 	/**
@@ -126,8 +144,9 @@ public enum TypeUE implements Enumerator {
 	 */
 	public static TypeUE get(int value) {
 		switch (value) {
-			case OBLIGATOIRE_VALUE: return OBLIGATOIRE;
 			case OPTIONNELLE_VALUE: return OPTIONNELLE;
+			case SPECIALISEE_VALUE: return SPECIALISEE;
+			case FONDAMENTALE_VALUE: return FONDAMENTALE;
 		}
 		return null;
 	}

@@ -31,6 +31,10 @@ public class ContenuPedagogiqueTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new ContenuPedagogiqueTests("ContenuPedagogique Tests");
+		suite.addTestSuite(NiveauTest.class);
+		suite.addTestSuite(SpecialiteTest.class);
+		suite.addTestSuite(UeTest.class);
+		suite.addTestSuite(FormationTest.class);
 		return suite;
 	}
 

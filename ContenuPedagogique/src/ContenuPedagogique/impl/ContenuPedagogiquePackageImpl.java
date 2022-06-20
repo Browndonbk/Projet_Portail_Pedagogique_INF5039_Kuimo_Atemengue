@@ -12,16 +12,21 @@ import ContenuPedagogique.Programmation;
 import ContenuPedagogique.Ressource;
 import ContenuPedagogique.Semestre;
 import ContenuPedagogique.Specialite;
+import ContenuPedagogique.TypeGRADE;
 import ContenuPedagogique.TypePROGR;
 import ContenuPedagogique.TypeUE;
 import ContenuPedagogique.Ue;
 
+import ContenuPedagogique.util.ContenuPedagogiqueValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -109,6 +114,13 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	private EEnum typePROGREEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum typeGRADEEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -160,6 +172,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 
 		// Initialize created meta-data
 		theContenuPedagogiquePackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theContenuPedagogiquePackage,
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return ContenuPedagogiqueValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theContenuPedagogiquePackage.freeze();
@@ -327,6 +348,87 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getNiveau__PasSpeUe1Sem__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__SemLieUeMemeNiv__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__UeSpeLieSemSpeNiv__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__SiSemPasSpe__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__SiSemAlors2__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__SiSpeUeFon1SemPSpe__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__SiSpePasSem__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__NivNomDiff__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNiveau__UeLieSemMemeNiv__DiagnosticChain_Map() {
+		return niveauEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSpecialite() {
 		return specialiteEClass;
 	}
@@ -356,6 +458,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 */
 	public EAttribute getSpecialite_Description() {
 		return (EAttribute)specialiteEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSpecialite__UeSpeAM1__DiagnosticChain_Map() {
+		return specialiteEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -462,6 +573,24 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getUe__UeSpe1Sem__DiagnosticChain_Map() {
+		return ueEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getUe__UeCodeDiff__DiagnosticChain_Map() {
+		return ueEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEnseignant() {
 		return enseignantEClass;
 	}
@@ -518,6 +647,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 */
 	public EAttribute getEnseignant_Bureau() {
 		return (EAttribute)enseignantEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnseignant_Grade() {
+		return (EAttribute)enseignantEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -606,6 +744,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getFormation__FormNomDiff__DiagnosticChain_Map() {
+		return formationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProgrammation() {
 		return programmationEClass;
 	}
@@ -669,6 +816,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getTypeGRADE() {
+		return typeGRADEEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ContenuPedagogiqueFactory getContenuPedagogiqueFactory() {
 		return (ContenuPedagogiqueFactory)getEFactoryInstance();
 	}
@@ -710,11 +866,21 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		createEReference(niveauEClass, NIVEAU__SPECIALITES);
 		createEReference(niveauEClass, NIVEAU__SEMESTRES);
 		createEAttribute(niveauEClass, NIVEAU__NOM);
+		createEOperation(niveauEClass, NIVEAU___PAS_SPE_UE1_SEM__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___SEM_LIE_UE_MEME_NIV__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___UE_SPE_LIE_SEM_SPE_NIV__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___SI_SEM_PAS_SPE__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___SI_SEM_ALORS2__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___SI_SPE_UE_FON1_SEM_PSPE__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___SI_SPE_PAS_SEM__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___NIV_NOM_DIFF__DIAGNOSTICCHAIN_MAP);
+		createEOperation(niveauEClass, NIVEAU___UE_LIE_SEM_MEME_NIV__DIAGNOSTICCHAIN_MAP);
 
 		specialiteEClass = createEClass(SPECIALITE);
 		createEReference(specialiteEClass, SPECIALITE__SEMESTRES);
 		createEAttribute(specialiteEClass, SPECIALITE__NOM);
 		createEAttribute(specialiteEClass, SPECIALITE__DESCRIPTION);
+		createEOperation(specialiteEClass, SPECIALITE___UE_SPE_AM1__DIAGNOSTICCHAIN_MAP);
 
 		ueEClass = createEClass(UE);
 		createEAttribute(ueEClass, UE__CODE);
@@ -727,6 +893,8 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		createEAttribute(ueEClass, UE__CONTENU);
 		createEAttribute(ueEClass, UE__CREDIT);
 		createEReference(ueEClass, UE__PROGRAMMATIONS);
+		createEOperation(ueEClass, UE___UE_SPE1_SEM__DIAGNOSTICCHAIN_MAP);
+		createEOperation(ueEClass, UE___UE_CODE_DIFF__DIAGNOSTICCHAIN_MAP);
 
 		enseignantEClass = createEClass(ENSEIGNANT);
 		createEReference(enseignantEClass, ENSEIGNANT__RESPONSABLE);
@@ -735,6 +903,7 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		createEReference(enseignantEClass, ENSEIGNANT__CHEF);
 		createEAttribute(enseignantEClass, ENSEIGNANT__EMAIL);
 		createEAttribute(enseignantEClass, ENSEIGNANT__BUREAU);
+		createEAttribute(enseignantEClass, ENSEIGNANT__GRADE);
 
 		ressourceEClass = createEClass(RESSOURCE);
 		createEAttribute(ressourceEClass, RESSOURCE__NOM);
@@ -747,6 +916,7 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		formationEClass = createEClass(FORMATION);
 		createEReference(formationEClass, FORMATION__NIVEAUX);
 		createEAttribute(formationEClass, FORMATION__NOM);
+		createEOperation(formationEClass, FORMATION___FORM_NOM_DIFF__DIAGNOSTICCHAIN_MAP);
 
 		programmationEClass = createEClass(PROGRAMMATION);
 		createEAttribute(programmationEClass, PROGRAMMATION__TYPE);
@@ -757,6 +927,7 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		// Create enums
 		typeUEEEnum = createEEnum(TYPE_UE);
 		typePROGREEnum = createEEnum(TYPE_PROGR);
+		typeGRADEEEnum = createEEnum(TYPE_GRADE);
 	}
 
 	/**
@@ -800,18 +971,108 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		initEAttribute(getDepartement_Acces(), ecorePackage.getEString(), "acces", null, 0, 1, Departement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(niveauEClass, Niveau.class, "Niveau", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNiveau_Niveau(), ecorePackage.getEInt(), "niveau", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNiveau_Niveau(), ecorePackage.getEInt(), "niveau", null, 1, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNiveau_Description(), ecorePackage.getEString(), "description", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNiveau_Responsablite(), this.getEnseignant(), this.getEnseignant_Responsable(), "responsablite", null, 1, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getNiveau_Responsablite(), this.getEnseignant(), this.getEnseignant_Responsable(), "responsablite", null, 1, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNiveau_Ues(), this.getUe(), null, "ues", null, 1, -1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNiveau_Specialites(), this.getSpecialite(), null, "specialites", null, 0, -1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNiveau_Semestres(), this.getSemestre(), null, "semestres", null, 0, -1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNiveau_Semestres(), this.getSemestre(), null, "semestres", null, 0, 2, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNiveau_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getNiveau__PasSpeUe1Sem__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "PasSpeUe1Sem", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
+		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__SemLieUeMemeNiv__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SemLieUeMemeNiv", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__UeSpeLieSemSpeNiv__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UeSpeLieSemSpeNiv", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__SiSemPasSpe__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SiSemPasSpe", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__SiSemAlors2__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SiSemAlors2", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__SiSpeUeFon1SemPSpe__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SiSpeUeFon1SemPSpe", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__SiSpePasSem__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SiSpePasSem", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__NivNomDiff__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "NivNomDiff", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getNiveau__UeLieSemMemeNiv__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UeLieSemMemeNiv", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(specialiteEClass, Specialite.class, "Specialite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpecialite_Semestres(), this.getSemestre(), null, "semestres", null, 1, -1, Specialite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecialite_Semestres(), this.getSemestre(), null, "semestres", null, 1, 2, Specialite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpecialite_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Specialite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpecialite_Description(), ecorePackage.getEString(), "description", null, 0, 1, Specialite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getSpecialite__UeSpeAM1__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UeSpeAM1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ueEClass, Ue.class, "Ue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUe_Code(), ecorePackage.getEString(), "code", null, 0, 1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -822,8 +1083,26 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		initEReference(getUe_Semestres(), this.getSemestre(), this.getSemestre_Ues(), "semestres", null, 1, -1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUe_EstEnseigne(), this.getEnseignant(), this.getEnseignant_Enseigne(), "EstEnseigne", null, 1, 1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUe_Contenu(), ecorePackage.getEString(), "Contenu", null, 0, 1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUe_Credit(), ecorePackage.getEInt(), "credit", null, 0, 1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUe_Credit(), ecorePackage.getEInt(), "credit", null, 1, 1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUe_Programmations(), this.getProgrammation(), null, "programmations", null, 0, -1, Ue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getUe__UeSpe1Sem__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UeSpe1Sem", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getUe__UeCodeDiff__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "UeCodeDiff", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(enseignantEClass, Enseignant.class, "Enseignant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnseignant_Responsable(), this.getNiveau(), this.getNiveau_Responsablite(), "responsable", null, 0, 1, Enseignant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -832,6 +1111,7 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		initEReference(getEnseignant_Chef(), this.getDepartement(), this.getDepartement_Dirige(), "chef", null, 0, 1, Enseignant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEnseignant_Email(), ecorePackage.getEString(), "email", null, 0, 1, Enseignant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEnseignant_Bureau(), ecorePackage.getEString(), "bureau", null, 0, 1, Enseignant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnseignant_Grade(), this.getTypeGRADE(), "grade", null, 0, 1, Enseignant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ressourceEClass, Ressource.class, "Ressource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRessource_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Ressource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -845,6 +1125,15 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 		initEReference(getFormation_Niveaux(), this.getNiveau(), null, "niveaux", null, 0, -1, Formation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormation_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Formation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getFormation__FormNomDiff__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "FormNomDiff", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(programmationEClass, Programmation.class, "Programmation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProgrammation_Type(), this.getTypePROGR(), "type", null, 0, 1, Programmation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProgrammation_Jour(), ecorePackage.getEString(), "jour", null, 0, 1, Programmation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -853,19 +1142,159 @@ public class ContenuPedagogiquePackageImpl extends EPackageImpl implements Conte
 
 		// Initialize enums and add enum literals
 		initEEnum(typeUEEEnum, TypeUE.class, "TypeUE");
-		addEEnumLiteral(typeUEEEnum, TypeUE.OBLIGATOIRE);
 		addEEnumLiteral(typeUEEEnum, TypeUE.OPTIONNELLE);
+		addEEnumLiteral(typeUEEEnum, TypeUE.SPECIALISEE);
+		addEEnumLiteral(typeUEEEnum, TypeUE.FONDAMENTALE);
 
 		initEEnum(typePROGREEnum, TypePROGR.class, "TypePROGR");
 		addEEnumLiteral(typePROGREEnum, TypePROGR.COURS_MAGISTRAL);
-		addEEnumLiteral(typePROGREEnum, TypePROGR.TRAVAUX_DIRIGÉS);
+		addEEnumLiteral(typePROGREEnum, TypePROGR.TRAVAUX_DIRIGES);
 		addEEnumLiteral(typePROGREEnum, TypePROGR.TRAVAUX_PRATRIQUES);
-		addEEnumLiteral(typePROGREEnum, TypePROGR.CONTRÔLE_CONTINU);
+		addEEnumLiteral(typePROGREEnum, TypePROGR.CONTROLE_CONTINU);
 		addEEnumLiteral(typePROGREEnum, TypePROGR.EXAMEN);
 		addEEnumLiteral(typePROGREEnum, TypePROGR.RATTRAPAGE);
 
+		initEEnum(typeGRADEEEnum, TypeGRADE.class, "TypeGRADE");
+		addEEnumLiteral(typeGRADEEEnum, TypeGRADE.ASSISTANT);
+		addEEnumLiteral(typeGRADEEEnum, TypeGRADE.CHARGE_DE_COURS);
+		addEEnumLiteral(typeGRADEEEnum, TypeGRADE.MAITRE_DE_CONFERENCES);
+		addEEnumLiteral(typeGRADEEEnum, TypeGRADE.PROFESSEUR);
+
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (niveauEClass,
+		   source,
+		   new String[] {
+			   "constraints", "UeLieSemMemeNiv"
+		   });
+		addAnnotation
+		  (specialiteEClass,
+		   source,
+		   new String[] {
+			   "constraints", "UeSpeAM1"
+		   });
+		addAnnotation
+		  (ueEClass,
+		   source,
+		   new String[] {
+			   "constraints", "UeCodeDiff"
+		   });
+		addAnnotation
+		  (formationEClass,
+		   source,
+		   new String[] {
+			   "constraints", "FormNomDiff"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (getNiveau__PasSpeUe1Sem__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "specialites->size()=0 implies self.ues -> forAll(ue | ue.semestres->size()=1)"
+		   });
+		addAnnotation
+		  (getNiveau__SemLieUeMemeNiv__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\tif specialites->size()=0 then\n\t\t\t\t  self.semestres.ues -> forAll(ue | self.ues -> includes(ue))\n\t\t\telse \n\t\t\t\tself.specialites.semestres.ues -> forAll(ue | self.ues -> includes(ue)) \n\t\t\tendif"
+		   });
+		addAnnotation
+		  (getNiveau__UeSpeLieSemSpeNiv__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\tself.ues -> forAll( ue |\n\t\t\t\t\tue.type=TypeUE::Specialisee implies\n\t\t\t\t\t\tue.semestres -> forAll(sem | self.specialites.semestres -> includes(sem))\n\t\t\t\t)"
+		   });
+		addAnnotation
+		  (getNiveau__SiSemPasSpe__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "semestres->size()>0 implies specialites->size()=0"
+		   });
+		addAnnotation
+		  (getNiveau__SiSemAlors2__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "specialites->oclIsUndefined() and semestres->oclIsUndefined()=false implies semestres->size()=2"
+		   });
+		addAnnotation
+		  (getNiveau__SiSpeUeFon1SemPSpe__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "specialites->size()>0 implies self.ues -> forAll(ue | \n\t\t\tue.type=TypeUE::Fondamentale implies\n\t\t\t\tself.specialites -> forAll(spe |\n\t\t\t\t\tspe.semestres -> one(sem | sem.ues -> includes(ue))\n\t\t\t\t)\n\t\t\t)"
+		   });
+		addAnnotation
+		  (getNiveau__SiSpePasSem__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "specialites->size()>0 implies semestres->size()=0"
+		   });
+		addAnnotation
+		  (getNiveau__NivNomDiff__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Niveau.allInstances() -> forAll(n1, n2 | n1 <> n2 implies n1.nom <> n2.nom)"
+		   });
+		addAnnotation
+		  (getNiveau__UeLieSemMemeNiv__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\t\t\tif specialites->size()=0 then\n\t\t\t\tself.ues -> forAll( ue |\n\t\t\t\t\tue.semestres -> forAll(sem | self.semestres -> includes(sem))\n\t\t\t\t)\n\t\t\telse \n\t\t\t\tself.ues -> forAll( ue |\n\t\t\t\t\tue.semestres -> forAll(sem | self.specialites.semestres -> includes(sem))\n\t\t\t\t) \n\t\t\tendif"
+		   });
+		addAnnotation
+		  (getSpecialite__UeSpeAM1__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.semestres.ues -> exists(ue | ue.type=TypeUE::Specialisee)"
+		   });
+		addAnnotation
+		  (getUe__UeSpe1Sem__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.type=TypeUE::Specialisee implies self.semestres->size()=1"
+		   });
+		addAnnotation
+		  (getUe__UeCodeDiff__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Ue.allInstances() -> forAll(ue1, ue2 | ue1 <> ue2 implies ue1.code <> ue2.code)"
+		   });
+		addAnnotation
+		  (getFormation__FormNomDiff__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Formation.allInstances() -> forAll(p1, p2 | p1 <> p2 implies p1.nom <> p2.nom)"
+		   });
 	}
 
 } //ContenuPedagogiquePackageImpl

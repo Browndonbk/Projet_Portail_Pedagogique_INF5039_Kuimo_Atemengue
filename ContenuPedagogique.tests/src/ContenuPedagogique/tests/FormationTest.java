@@ -13,6 +13,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Formation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link ContenuPedagogique.Formation#FormNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Form Nom Diff</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class FormationTest extends TestCase {
@@ -84,6 +90,19 @@ public class FormationTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link ContenuPedagogique.Formation#FormNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Form Nom Diff</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ContenuPedagogique.Formation#FormNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testFormNomDiff__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //FormationTest

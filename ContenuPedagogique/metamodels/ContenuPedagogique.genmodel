@@ -7,16 +7,23 @@
   <foreignModel>ContenuPedagogique.ecore</foreignModel>
   <genPackages prefix="ContenuPedagogique" disposableProviderFactory="true" ecorePackage="ContenuPedagogique.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ContenuPedagogique.ecore#//TypeUE">
-      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Obligatoire"/>
       <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Optionnelle"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Specialisee"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeUE/Fondamentale"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ContenuPedagogique.ecore#//TypePROGR">
       <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Cours_Magistral"/>
-      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Travaux_Dirigés"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Travaux_Diriges"/>
       <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Travaux_Pratriques"/>
-      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Contrôle_Continu"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Controle_Continu"/>
       <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Examen"/>
       <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypePROGR/Rattrapage"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ContenuPedagogique.ecore#//TypeGRADE">
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeGRADE/Assistant"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeGRADE/Charge_de_Cours"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeGRADE/Maitre_de_Conferences"/>
+      <genEnumLiterals ecoreEnumLiteral="ContenuPedagogique.ecore#//TypeGRADE/Professeur"/>
     </genEnums>
     <genClasses ecoreClass="ContenuPedagogique.ecore#//Departement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Departement/nom"/>
@@ -61,6 +68,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ContenuPedagogique.ecore#//Enseignant/chef"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/email"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/bureau"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Enseignant/grade"/>
     </genClasses>
     <genClasses ecoreClass="ContenuPedagogique.ecore#//Ressource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ContenuPedagogique.ecore#//Ressource/nom"/>

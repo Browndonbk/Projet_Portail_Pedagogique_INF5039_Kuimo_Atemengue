@@ -2,6 +2,8 @@
  */
 package ContenuPedagogique;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -21,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ContenuPedagogique.ContenuPedagogiquePackage#getSpecialite()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UeSpeAM1'"
  * @generated
  */
 public interface Specialite extends EObject {
@@ -32,7 +34,7 @@ public interface Specialite extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Semestres</em>' containment reference list.
 	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getSpecialite_Semestres()
-	 * @model containment="true" required="true"
+	 * @model containment="true" required="true" upper="2"
 	 * @generated
 	 */
 	EList<Semestre> getSemestres();
@@ -80,5 +82,13 @@ public interface Specialite extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.semestres.ues -&gt; exists(ue | ue.type=TypeUE::Specialisee)'"
+	 * @generated
+	 */
+	boolean UeSpeAM1(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Specialite

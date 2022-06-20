@@ -2,6 +2,8 @@
  */
 package ContenuPedagogique;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -28,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ContenuPedagogique.ContenuPedagogiquePackage#getUe()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UeCodeDiff'"
  * @generated
  */
 public interface Ue extends EObject {
@@ -202,7 +204,7 @@ public interface Ue extends EObject {
 	 * @return the value of the '<em>Credit</em>' attribute.
 	 * @see #setCredit(int)
 	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getUe_Credit()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getCredit();
@@ -228,5 +230,21 @@ public interface Ue extends EObject {
 	 * @generated
 	 */
 	EList<Programmation> getProgrammations();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.type=TypeUE::Specialisee implies self.semestres-&gt;size()=1'"
+	 * @generated
+	 */
+	boolean UeSpe1Sem(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='Ue.allInstances() -&gt; forAll(ue1, ue2 | ue1 &lt;&gt; ue2 implies ue1.code &lt;&gt; ue2.code)'"
+	 * @generated
+	 */
+	boolean UeCodeDiff(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Ue

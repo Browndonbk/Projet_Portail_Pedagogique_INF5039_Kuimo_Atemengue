@@ -3,6 +3,7 @@
 package ContenuPedagogique.impl;
 
 import ContenuPedagogique.ContenuPedagogiquePackage;
+import ContenuPedagogique.ContenuPedagogiqueTables;
 import ContenuPedagogique.Enseignant;
 import ContenuPedagogique.Programmation;
 import ContenuPedagogique.Ressource;
@@ -10,11 +11,15 @@ import ContenuPedagogique.Semestre;
 import ContenuPedagogique.TypeUE;
 import ContenuPedagogique.Ue;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
+import java.util.List;
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -26,6 +31,27 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.ocl.pivot.StandardLibrary;
+import org.eclipse.ocl.pivot.evaluation.Executor;
+import org.eclipse.ocl.pivot.ids.EnumerationLiteralId;
+import org.eclipse.ocl.pivot.ids.IdResolver;
+import org.eclipse.ocl.pivot.ids.TypeId;
+import org.eclipse.ocl.pivot.internal.library.executor.ExecutorMultipleIterationManager;
+import org.eclipse.ocl.pivot.library.AbstractSimpleOperation;
+import org.eclipse.ocl.pivot.library.LibraryIteration.LibraryIterationExtension;
+import org.eclipse.ocl.pivot.library.classifier.ClassifierAllInstancesOperation;
+import org.eclipse.ocl.pivot.library.collection.CollectionSizeOperation;
+import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
+import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
+import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
+import org.eclipse.ocl.pivot.oclstdlib.OCLstdlibTables;
+import org.eclipse.ocl.pivot.utilities.ClassUtil;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.pivot.utilities.ValueUtil;
+import org.eclipse.ocl.pivot.values.IntegerValue;
+import org.eclipse.ocl.pivot.values.InvalidValueException;
+import org.eclipse.ocl.pivot.values.OrderedSetValue;
+import org.eclipse.ocl.pivot.values.SetValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -118,7 +144,7 @@ public class UeImpl extends MinimalEObjectImpl.Container implements Ue {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TypeUE TYPE_EDEFAULT = TypeUE.OBLIGATOIRE;
+	protected static final TypeUE TYPE_EDEFAULT = TypeUE.OPTIONNELLE;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -456,6 +482,180 @@ public class UeImpl extends MinimalEObjectImpl.Container implements Ue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean UeSpe1Sem(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Ue::UeSpe1Sem";
+		try {
+			/**
+			 *
+			 * inv UeSpe1Sem:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let result : Boolean[?] = self.type = TypeUE::Specialisee implies
+			 *         self.semestres->size() = 1
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ContenuPedagogiquePackage.Literals.UE___UE_SPE1_SEM__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ContenuPedagogiqueTables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
+			}
+			else {
+				final /*@NonInvalid*/ TypeUE type = this.getType();
+				final /*@NonInvalid*/ EnumerationLiteralId BOXED_type = type == null ? null : ContenuPedagogiqueTables.ENUMid_TypeUE.getEnumerationLiteralId(ClassUtil.nonNullState(type.getName()));
+				final /*@NonInvalid*/ boolean eq = BOXED_type == ContenuPedagogiqueTables.ELITid_Specialisee;
+				final /*@NonInvalid*/ Boolean result;
+				if (!eq) {
+					result = ValueUtil.TRUE_VALUE;
+				}
+				else {
+					final /*@NonInvalid*/ List<Semestre> semestres = this.getSemestres();
+					final /*@NonInvalid*/ OrderedSetValue BOXED_semestres = idResolver.createOrderedSetOfAll(ContenuPedagogiqueTables.ORD_CLSSid_Semestre, semestres);
+					final /*@NonInvalid*/ IntegerValue size = CollectionSizeOperation.INSTANCE.evaluate(BOXED_semestres);
+					final /*@NonInvalid*/ boolean eq_0 = size.equals(ContenuPedagogiqueTables.INT_1);
+					if (eq_0) {
+						result = ValueUtil.TRUE_VALUE;
+					}
+					else {
+						result = ValueUtil.FALSE_VALUE;
+					}
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, ContenuPedagogiqueTables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
+			}
+			return local_0;
+		}
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean UeCodeDiff(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Ue::UeCodeDiff";
+		try {
+			/**
+			 *
+			 * inv UeCodeDiff:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let
+			 *         result : Boolean[?] = Ue.allInstances()
+			 *         ->forAll(ue1, ue2 | ue1 <> ue2 implies ue1.code <> ue2.code)
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ StandardLibrary standardLibrary = idResolver.getStandardLibrary();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, ContenuPedagogiquePackage.Literals.UE___UE_CODE_DIFF__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, ContenuPedagogiqueTables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_4;
+			if (le) {
+				local_4 = true;
+			}
+			else {
+				/*@Caught*/ Object CAUGHT_result;
+				try {
+					final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_ContenuPedagogique_c_c_Ue = idResolver.getClass(ContenuPedagogiqueTables.CLSSid_Ue, null);
+					final /*@NonInvalid*/ SetValue allInstances = ClassifierAllInstancesOperation.INSTANCE.evaluate(executor, ContenuPedagogiqueTables.SET_CLSSid_Ue, TYP_ContenuPedagogique_c_c_Ue);
+					final org.eclipse.ocl.pivot.Class TYPE_result_0 = executor.getStaticTypeOfValue(null, allInstances);
+					final LibraryIterationExtension IMPL_result_0 = (LibraryIterationExtension)TYPE_result_0.lookupImplementation(standardLibrary, OCLstdlibTables.Operations._Collection__1_forAll);
+					final /*@NonNull*/ Object ACC_result_0 = IMPL_result_0.createAccumulatorValue(executor, TypeId.BOOLEAN, TypeId.BOOLEAN);
+					/**
+					 * Implementation of the iterator body.
+					 */
+					final AbstractSimpleOperation BODY_result_0 = new AbstractSimpleOperation() {
+						/**
+						 * ue1 <> ue2 implies ue1.code <> ue2.code
+						 */
+						@Override
+						public /*@Nullable*/ Object evaluate(final Executor executor, final TypeId typeId, final /*@Nullable*/ Object /*@NonNull*/ [] sourceAndArgumentValues) {
+							@SuppressWarnings("unused")
+							final /*@NonInvalid*/ SetValue allInstances = (SetValue)sourceAndArgumentValues[0];
+							final /*@NonInvalid*/ Object ue1 = sourceAndArgumentValues[1];
+							final /*@NonInvalid*/ Object ue2 = sourceAndArgumentValues[2];
+							/*@Caught*/ Object CAUGHT_implies;
+							try {
+								final /*@NonInvalid*/ Ue local_0 = (Ue)ue1;
+								final /*@NonInvalid*/ Ue local_1 = (Ue)ue2;
+								final /*@NonInvalid*/ boolean ne = (local_0 != null) ? !local_0.equals(local_1) : (local_1 != null);
+								final /*@Thrown*/ Boolean implies;
+								if (!ne) {
+									implies = ValueUtil.TRUE_VALUE;
+								}
+								else {
+									/*@Caught*/ Object CAUGHT_ne_0;
+									try {
+										if (local_0 == null) {
+											throw new InvalidValueException("Null source for \'\'http://www.ContenuPedagogique.com\'::Ue::code\'");
+										}
+										final /*@Thrown*/ String code = local_0.getCode();
+										if (local_1 == null) {
+											throw new InvalidValueException("Null source for \'\'http://www.ContenuPedagogique.com\'::Ue::code\'");
+										}
+										final /*@Thrown*/ String code_0 = local_1.getCode();
+										final /*@Thrown*/ boolean ne_0 = (code != null) ? !code.equals(code_0) : (code_0 != null);
+										CAUGHT_ne_0 = ne_0;
+									}
+									catch (Exception e) {
+										CAUGHT_ne_0 = ValueUtil.createInvalidValue(e);
+									}
+									if (CAUGHT_ne_0 == ValueUtil.TRUE_VALUE) {
+										implies = ValueUtil.TRUE_VALUE;
+									}
+									else {
+										if (CAUGHT_ne_0 instanceof InvalidValueException) {
+											throw (InvalidValueException)CAUGHT_ne_0;
+										}
+										implies = ValueUtil.FALSE_VALUE;
+									}
+								}
+								CAUGHT_implies = implies;
+							}
+							catch (Exception e) {
+								CAUGHT_implies = ValueUtil.createInvalidValue(e);
+							}
+							return CAUGHT_implies;
+						}
+					};
+					final ExecutorMultipleIterationManager MGR_result_0 = new ExecutorMultipleIterationManager(executor, 2, TypeId.BOOLEAN, BODY_result_0, allInstances, ACC_result_0);
+					final /*@Thrown*/ Boolean result = (Boolean)IMPL_result_0.evaluateIteration(MGR_result_0);
+					CAUGHT_result = result;
+				}
+				catch (Exception e) {
+					CAUGHT_result = ValueUtil.createInvalidValue(e);
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, ContenuPedagogiqueTables.INT_0).booleanValue();
+				local_4 = logDiagnostic;
+			}
+			return local_4;
+		}
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -641,6 +841,23 @@ public class UeImpl extends MinimalEObjectImpl.Container implements Ue {
 				return programmations != null && !programmations.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ContenuPedagogiquePackage.UE___UE_SPE1_SEM__DIAGNOSTICCHAIN_MAP:
+				return UeSpe1Sem((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case ContenuPedagogiquePackage.UE___UE_CODE_DIFF__DIAGNOSTICCHAIN_MAP:
+				return UeCodeDiff((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

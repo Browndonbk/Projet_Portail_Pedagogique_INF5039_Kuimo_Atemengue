@@ -2,6 +2,8 @@
  */
 package ContenuPedagogique;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -25,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ContenuPedagogique.ContenuPedagogiquePackage#getNiveau()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='UeLieSemMemeNiv'"
  * @generated
  */
 public interface Niveau extends EObject {
@@ -36,7 +38,7 @@ public interface Niveau extends EObject {
 	 * @return the value of the '<em>Niveau</em>' attribute.
 	 * @see #setNiveau(int)
 	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getNiveau_Niveau()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getNiveau();
@@ -82,7 +84,7 @@ public interface Niveau extends EObject {
 	 * @see #setResponsablite(Enseignant)
 	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getNiveau_Responsablite()
 	 * @see ContenuPedagogique.Enseignant#getResponsable
-	 * @model opposite="responsable" required="true" ordered="false"
+	 * @model opposite="responsable" required="true"
 	 * @generated
 	 */
 	Enseignant getResponsablite();
@@ -128,7 +130,7 @@ public interface Niveau extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Semestres</em>' containment reference list.
 	 * @see ContenuPedagogique.ContenuPedagogiquePackage#getNiveau_Semestres()
-	 * @model containment="true"
+	 * @model containment="true" upper="2"
 	 * @generated
 	 */
 	EList<Semestre> getSemestres();
@@ -154,5 +156,77 @@ public interface Niveau extends EObject {
 	 * @generated
 	 */
 	void setNom(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='specialites-&gt;size()=0 implies self.ues -&gt; forAll(ue | ue.semestres-&gt;size()=1)'"
+	 * @generated
+	 */
+	boolean PasSpeUe1Sem(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tif specialites-&gt;size()=0 then\n\t\t\t\t  self.semestres.ues -&gt; forAll(ue | self.ues -&gt; includes(ue))\n\t\t\telse \n\t\t\t\tself.specialites.semestres.ues -&gt; forAll(ue | self.ues -&gt; includes(ue)) \n\t\t\tendif'"
+	 * @generated
+	 */
+	boolean SemLieUeMemeNiv(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tself.ues -&gt; forAll( ue |\n\t\t\t\t\tue.type=TypeUE::Specialisee implies\n\t\t\t\t\t\tue.semestres -&gt; forAll(sem | self.specialites.semestres -&gt; includes(sem))\n\t\t\t\t)'"
+	 * @generated
+	 */
+	boolean UeSpeLieSemSpeNiv(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='semestres-&gt;size()&gt;0 implies specialites-&gt;size()=0'"
+	 * @generated
+	 */
+	boolean SiSemPasSpe(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='specialites-&gt;oclIsUndefined() and semestres-&gt;oclIsUndefined()=false implies semestres-&gt;size()=2'"
+	 * @generated
+	 */
+	boolean SiSemAlors2(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='specialites-&gt;size()&gt;0 implies self.ues -&gt; forAll(ue | \n\t\t\tue.type=TypeUE::Fondamentale implies\n\t\t\t\tself.specialites -&gt; forAll(spe |\n\t\t\t\t\tspe.semestres -&gt; one(sem | sem.ues -&gt; includes(ue))\n\t\t\t\t)\n\t\t\t)'"
+	 * @generated
+	 */
+	boolean SiSpeUeFon1SemPSpe(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='specialites-&gt;size()&gt;0 implies semestres-&gt;size()=0'"
+	 * @generated
+	 */
+	boolean SiSpePasSem(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='Niveau.allInstances() -&gt; forAll(n1, n2 | n1 &lt;&gt; n2 implies n1.nom &lt;&gt; n2.nom)'"
+	 * @generated
+	 */
+	boolean NivNomDiff(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tif specialites-&gt;size()=0 then\n\t\t\t\tself.ues -&gt; forAll( ue |\n\t\t\t\t\tue.semestres -&gt; forAll(sem | self.semestres -&gt; includes(sem))\n\t\t\t\t)\n\t\t\telse \n\t\t\t\tself.ues -&gt; forAll( ue |\n\t\t\t\t\tue.semestres -&gt; forAll(sem | self.specialites.semestres -&gt; includes(sem))\n\t\t\t\t) \n\t\t\tendif'"
+	 * @generated
+	 */
+	boolean UeLieSemMemeNiv(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Niveau

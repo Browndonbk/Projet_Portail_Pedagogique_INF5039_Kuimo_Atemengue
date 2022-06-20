@@ -66,6 +66,7 @@ public class EnseignantItemProvider
 			addChefPropertyDescriptor(object);
 			addEmailPropertyDescriptor(object);
 			addBureauPropertyDescriptor(object);
+			addGradePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -203,6 +204,28 @@ public class EnseignantItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Grade feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGradePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Enseignant_grade_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Enseignant_grade_feature", "_UI_Enseignant_type"),
+				 ContenuPedagogiquePackage.Literals.ENSEIGNANT__GRADE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Enseignant.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -243,6 +266,7 @@ public class EnseignantItemProvider
 			case ContenuPedagogiquePackage.ENSEIGNANT__NOM:
 			case ContenuPedagogiquePackage.ENSEIGNANT__EMAIL:
 			case ContenuPedagogiquePackage.ENSEIGNANT__BUREAU:
+			case ContenuPedagogiquePackage.ENSEIGNANT__GRADE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

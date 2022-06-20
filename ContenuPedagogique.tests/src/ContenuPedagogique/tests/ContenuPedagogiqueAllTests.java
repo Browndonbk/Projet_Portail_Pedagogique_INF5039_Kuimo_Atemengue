@@ -31,6 +31,7 @@ public class ContenuPedagogiqueAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new ContenuPedagogiqueAllTests("ContenuPedagogique Tests");
+		suite.addTest(ContenuPedagogiqueTests.suite());
 		return suite;
 	}
 

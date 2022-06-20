@@ -18,18 +18,28 @@ Package ContenuPedagogique <http://www.ContenuPedagogique.com>
     Attribute acces : EString
 
   Class Niveau
-    Attribute niveau : EInt
+    Attribute niveau : EInt<<1..1>>
     Attribute description : EString
     Reference responsablite : Enseignant<<1..1>>
     Reference ues : Ue<<1..*>>
     Reference specialites : Specialite<<0..*>>
-    Reference semestres : Semestre<<0..*>>
+    Reference semestres : Semestre<<0..2>>
     Attribute nom : EString
+    Operation PasSpeUe1Sem(EDiagnosticChain, EMap) : EBoolean
+    Operation SemLieUeMemeNiv(EDiagnosticChain, EMap) : EBoolean
+    Operation UeSpeLieSemSpeNiv(EDiagnosticChain, EMap) : EBoolean
+    Operation SiSemPasSpe(EDiagnosticChain, EMap) : EBoolean
+    Operation SiSemAlors2(EDiagnosticChain, EMap) : EBoolean
+    Operation SiSpeUeFon1SemPSpe(EDiagnosticChain, EMap) : EBoolean
+    Operation SiSpePasSem(EDiagnosticChain, EMap) : EBoolean
+    Operation NivNomDiff(EDiagnosticChain, EMap) : EBoolean
+    Operation UeLieSemMemeNiv(EDiagnosticChain, EMap) : EBoolean
 
   Class Specialite
-    Reference semestres : Semestre<<1..*>>
+    Reference semestres : Semestre<<1..2>>
     Attribute nom : EString
     Attribute description : EString
+    Operation UeSpeAM1(EDiagnosticChain, EMap) : EBoolean
 
   Class Ue
     Attribute code : EString
@@ -40,8 +50,10 @@ Package ContenuPedagogique <http://www.ContenuPedagogique.com>
     Reference semestres : Semestre<<1..*>>
     Reference EstEnseigne : Enseignant<<1..1>>
     Attribute Contenu : EString
-    Attribute credit : EInt
+    Attribute credit : EInt<<1..1>>
     Reference programmations : Programmation<<0..*>>
+    Operation UeSpe1Sem(EDiagnosticChain, EMap) : EBoolean
+    Operation UeCodeDiff(EDiagnosticChain, EMap) : EBoolean
 
   Class Enseignant
     Reference responsable : Niveau
@@ -50,6 +62,7 @@ Package ContenuPedagogique <http://www.ContenuPedagogique.com>
     Reference chef : Departement
     Attribute email : EString
     Attribute bureau : EString
+    Attribute grade : TypeGRADE
 
   Class Ressource
     Attribute nom : EString
@@ -62,6 +75,7 @@ Package ContenuPedagogique <http://www.ContenuPedagogique.com>
   Class Formation
     Reference niveaux : Niveau<<0..*>>
     Attribute nom : EString
+    Operation FormNomDiff(EDiagnosticChain, EMap) : EBoolean
 
   Class Programmation
     Attribute type : TypePROGR
@@ -70,13 +84,20 @@ Package ContenuPedagogique <http://www.ContenuPedagogique.com>
     Attribute salle : EString
 
   Enum TypeUE
-    Literal Obligatoire = 0
     Literal Optionnelle = 1
+    Literal Specialisee = 2
+    Literal Fondamentale = 3
 
   Enum TypePROGR
     Literal Cours_Magistral = 0
-    Literal Travaux_Dirigés = 1
+    Literal Travaux_Diriges = 1
     Literal Travaux_Pratriques = 2
-    Literal Contrôle_Continu = 3
+    Literal Controle_Continu = 3
     Literal Examen = 4
     Literal Rattrapage = 5
+
+  Enum TypeGRADE
+    Literal Assistant = 0
+    Literal Charge_de_Cours = 1
+    Literal Maitre_de_Conferences = 2
+    Literal Professeur = 3

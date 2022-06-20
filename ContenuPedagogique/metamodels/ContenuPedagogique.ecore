@@ -126,9 +126,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TypePROGR">
     <eLiterals name="Cours_Magistral" literal="Cours Magistral"/>
-    <eLiterals name="Travaux_Dirigés" value="1" literal="Travaux Dirigés"/>
+    <eLiterals name="Travaux_Diriges" value="1" literal="Travaux Dirigés"/>
     <eLiterals name="Travaux_Pratriques" value="2" literal="Travaux Pratriques"/>
-    <eLiterals name="Contrôle_Continu" value="3" literal="Contrôle Continu"/>
+    <eLiterals name="Controle_Continu" value="3" literal="Contrôle Continu"/>
     <eLiterals name="Examen" value="4"/>
     <eLiterals name="Rattrapage" value="5"/>
   </eClassifiers>
@@ -140,8 +140,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TypeGRADE">
     <eLiterals name="Assistant" literal="Assistant"/>
-    <eLiterals name="Chargé_de_Cours" value="1" literal="Chargé de Cours"/>
-    <eLiterals name="Maitre_de_Conférences" value="2" literal="Maitre de Conférences"/>
+    <eLiterals name="Charge_de_Cours" value="1" literal="Chargé de Cours"/>
+    <eLiterals name="Maitre_de_Conferences" value="2" literal="Maitre de Conférences"/>
     <eLiterals name="Professeur" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

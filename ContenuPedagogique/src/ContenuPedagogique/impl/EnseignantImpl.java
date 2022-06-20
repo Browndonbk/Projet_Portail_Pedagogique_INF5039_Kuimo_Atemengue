@@ -6,6 +6,7 @@ import ContenuPedagogique.ContenuPedagogiquePackage;
 import ContenuPedagogique.Departement;
 import ContenuPedagogique.Enseignant;
 import ContenuPedagogique.Niveau;
+import ContenuPedagogique.TypeGRADE;
 import ContenuPedagogique.Ue;
 
 import java.util.Collection;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link ContenuPedagogique.impl.EnseignantImpl#getChef <em>Chef</em>}</li>
  *   <li>{@link ContenuPedagogique.impl.EnseignantImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link ContenuPedagogique.impl.EnseignantImpl#getBureau <em>Bureau</em>}</li>
+ *   <li>{@link ContenuPedagogique.impl.EnseignantImpl#getGrade <em>Grade</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,6 +134,26 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 	 * @ordered
 	 */
 	protected String bureau = BUREAU_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGrade() <em>Grade</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGrade()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TypeGRADE GRADE_EDEFAULT = TypeGRADE.ASSISTANT;
+
+	/**
+	 * The cached value of the '{@link #getGrade() <em>Grade</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGrade()
+	 * @generated
+	 * @ordered
+	 */
+	protected TypeGRADE grade = GRADE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -352,6 +374,27 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TypeGRADE getGrade() {
+		return grade;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGrade(TypeGRADE newGrade) {
+		TypeGRADE oldGrade = grade;
+		grade = newGrade == null ? GRADE_EDEFAULT : newGrade;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ContenuPedagogiquePackage.ENSEIGNANT__GRADE, oldGrade, grade));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -410,6 +453,8 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 				return getEmail();
 			case ContenuPedagogiquePackage.ENSEIGNANT__BUREAU:
 				return getBureau();
+			case ContenuPedagogiquePackage.ENSEIGNANT__GRADE:
+				return getGrade();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -442,6 +487,9 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 			case ContenuPedagogiquePackage.ENSEIGNANT__BUREAU:
 				setBureau((String)newValue);
 				return;
+			case ContenuPedagogiquePackage.ENSEIGNANT__GRADE:
+				setGrade((TypeGRADE)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -472,6 +520,9 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 			case ContenuPedagogiquePackage.ENSEIGNANT__BUREAU:
 				setBureau(BUREAU_EDEFAULT);
 				return;
+			case ContenuPedagogiquePackage.ENSEIGNANT__GRADE:
+				setGrade(GRADE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -496,6 +547,8 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
 			case ContenuPedagogiquePackage.ENSEIGNANT__BUREAU:
 				return BUREAU_EDEFAULT == null ? bureau != null : !BUREAU_EDEFAULT.equals(bureau);
+			case ContenuPedagogiquePackage.ENSEIGNANT__GRADE:
+				return grade != GRADE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -516,6 +569,8 @@ public class EnseignantImpl extends MinimalEObjectImpl.Container implements Ense
 		result.append(email);
 		result.append(", bureau: ");
 		result.append(bureau);
+		result.append(", grade: ");
+		result.append(grade);
 		result.append(')');
 		return result.toString();
 	}

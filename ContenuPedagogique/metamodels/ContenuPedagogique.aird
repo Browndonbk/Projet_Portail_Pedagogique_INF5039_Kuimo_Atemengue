@@ -4,7 +4,7 @@
     <semanticResources>ContenuPedagogique.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Vx4yQOMjEeyjpPJYgaP5Uw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ay-tkOMjEeyjpPJYgaP5Uw" name="ContenuPedagogique class diagram" repPath="#_ax8LwOMjEeyjpPJYgaP5Uw" changeId="71a978d4-2d55-4bac-8519-0168230a2b69">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ay-tkOMjEeyjpPJYgaP5Uw" name="ContenuPedagogique class diagram" repPath="#_ax8LwOMjEeyjpPJYgaP5Uw" changeId="1b4f057d-a7cd-4bef-a87d-39a1c58a582a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ContenuPedagogique.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1026,9 +1026,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bM_-wejDEeyS0YZ9rilcGQ" name="Travaux_Dirigés" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Travaux_Dirigés"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Travaux_Dirigés"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bM_-wejDEeyS0YZ9rilcGQ" name="Travaux_Diriges" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Travaux_Diriges"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Travaux_Diriges"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_bNBz8OjDEeyS0YZ9rilcGQ" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
@@ -1042,9 +1042,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dukjo-jDEeyS0YZ9rilcGQ" name="Contrôle_Continu" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Contrôle_Continu"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Contrôle_Continu"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dukjo-jDEeyS0YZ9rilcGQ" name="Controle_Continu" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Controle_Continu"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypePROGR/Controle_Continu"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_dukjpOjDEeyS0YZ9rilcGQ" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
@@ -1141,17 +1141,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_33W8MOpJEeyvHrNpi7x1yA" name="Chargé_de_Cours" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Chargé_de_Cours"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Chargé_de_Cours"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_33W8MOpJEeyvHrNpi7x1yA" name="Charge_de_Cours" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Charge_de_Cours"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Charge_de_Cours"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_33XjQOpJEeyvHrNpi7x1yA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_E0jLYOpKEeyvHrNpi7x1yA" name="Maitre_de_Conférences" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Maitre_de_Conférences"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Maitre_de_Conférences"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_E0jLYOpKEeyvHrNpi7x1yA" name="Maitre_de_Conferences" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Maitre_de_Conferences"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="ContenuPedagogique.ecore#//TypeGRADE/Maitre_de_Conferences"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_E0jLYepKEeyvHrNpi7x1yA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

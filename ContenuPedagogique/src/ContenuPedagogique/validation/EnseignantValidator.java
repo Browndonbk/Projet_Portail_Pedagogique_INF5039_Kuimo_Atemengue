@@ -6,6 +6,7 @@ package ContenuPedagogique.validation;
 
 import ContenuPedagogique.Departement;
 import ContenuPedagogique.Niveau;
+import ContenuPedagogique.TypeGRADE;
 import ContenuPedagogique.Ue;
 
 import org.eclipse.emf.common.util.EList;
@@ -25,4 +26,6 @@ public interface EnseignantValidator {
 	boolean validateChef(Departement value);
 	boolean validateEmail(String value);
 	boolean validateBureau(String value);
+
+	boolean validateGrade(TypeGRADE value);
 }

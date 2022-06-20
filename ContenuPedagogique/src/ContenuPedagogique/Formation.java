@@ -2,6 +2,8 @@
  */
 package ContenuPedagogique;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -20,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see ContenuPedagogique.ContenuPedagogiquePackage#getFormation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='FormNomDiff'"
  * @generated
  */
 public interface Formation extends EObject {
@@ -57,5 +59,13 @@ public interface Formation extends EObject {
 	 * @generated
 	 */
 	void setNom(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='Formation.allInstances() -&gt; forAll(p1, p2 | p1 &lt;&gt; p2 implies p1.nom &lt;&gt; p2.nom)'"
+	 * @generated
+	 */
+	boolean FormNomDiff(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Formation

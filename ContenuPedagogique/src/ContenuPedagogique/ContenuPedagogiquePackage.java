@@ -5,6 +5,7 @@ package ContenuPedagogique;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see ContenuPedagogique.ContenuPedagogiqueFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore"
  * @generated
  */
 public interface ContenuPedagogiquePackage extends EPackage {
@@ -240,13 +242,94 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	int NIVEAU_FEATURE_COUNT = 7;
 
 	/**
+	 * The operation id for the '<em>Pas Spe Ue1 Sem</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___PAS_SPE_UE1_SEM__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Sem Lie Ue Meme Niv</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___SEM_LIE_UE_MEME_NIV__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Ue Spe Lie Sem Spe Niv</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___UE_SPE_LIE_SEM_SPE_NIV__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
+	 * The operation id for the '<em>Si Sem Pas Spe</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___SI_SEM_PAS_SPE__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
+	 * The operation id for the '<em>Si Sem Alors2</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___SI_SEM_ALORS2__DIAGNOSTICCHAIN_MAP = 4;
+
+	/**
+	 * The operation id for the '<em>Si Spe Ue Fon1 Sem PSpe</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___SI_SPE_UE_FON1_SEM_PSPE__DIAGNOSTICCHAIN_MAP = 5;
+
+	/**
+	 * The operation id for the '<em>Si Spe Pas Sem</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___SI_SPE_PAS_SEM__DIAGNOSTICCHAIN_MAP = 6;
+
+	/**
+	 * The operation id for the '<em>Niv Nom Diff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___NIV_NOM_DIFF__DIAGNOSTICCHAIN_MAP = 7;
+
+	/**
+	 * The operation id for the '<em>Ue Lie Sem Meme Niv</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NIVEAU___UE_LIE_SEM_MEME_NIV__DIAGNOSTICCHAIN_MAP = 8;
+
+	/**
 	 * The number of operations of the '<em>Niveau</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NIVEAU_OPERATION_COUNT = 0;
+	int NIVEAU_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link ContenuPedagogique.impl.SpecialiteImpl <em>Specialite</em>}' class.
@@ -295,13 +378,22 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	int SPECIALITE_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Ue Spe AM1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALITE___UE_SPE_AM1__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>Specialite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIALITE_OPERATION_COUNT = 0;
+	int SPECIALITE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link ContenuPedagogique.impl.UeImpl <em>Ue</em>}' class.
@@ -413,13 +505,31 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	int UE_FEATURE_COUNT = 10;
 
 	/**
+	 * The operation id for the '<em>Ue Spe1 Sem</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UE___UE_SPE1_SEM__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Ue Code Diff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UE___UE_CODE_DIFF__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Ue</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UE_OPERATION_COUNT = 0;
+	int UE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link ContenuPedagogique.impl.EnseignantImpl <em>Enseignant</em>}' class.
@@ -486,13 +596,22 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	int ENSEIGNANT__BUREAU = 5;
 
 	/**
+	 * The feature id for the '<em><b>Grade</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENSEIGNANT__GRADE = 6;
+
+	/**
 	 * The number of structural features of the '<em>Enseignant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENSEIGNANT_FEATURE_COUNT = 6;
+	int ENSEIGNANT_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Enseignant</em>' class.
@@ -633,13 +752,22 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	int FORMATION_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Form Nom Diff</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMATION___FORM_NOM_DIFF__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>Formation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORMATION_OPERATION_COUNT = 0;
+	int FORMATION_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link ContenuPedagogique.impl.ProgrammationImpl <em>Programmation</em>}' class.
@@ -724,6 +852,17 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	 * @generated
 	 */
 	int TYPE_PROGR = 10;
+
+
+	/**
+	 * The meta object id for the '{@link ContenuPedagogique.TypeGRADE <em>Type GRADE</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ContenuPedagogique.TypeGRADE
+	 * @see ContenuPedagogique.impl.ContenuPedagogiquePackageImpl#getTypeGRADE()
+	 * @generated
+	 */
+	int TYPE_GRADE = 11;
 
 
 	/**
@@ -912,6 +1051,96 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	EAttribute getNiveau_Nom();
 
 	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#PasSpeUe1Sem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Pas Spe Ue1 Sem</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Pas Spe Ue1 Sem</em>' operation.
+	 * @see ContenuPedagogique.Niveau#PasSpeUe1Sem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__PasSpeUe1Sem__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#SemLieUeMemeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Sem Lie Ue Meme Niv</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Sem Lie Ue Meme Niv</em>' operation.
+	 * @see ContenuPedagogique.Niveau#SemLieUeMemeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__SemLieUeMemeNiv__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#UeSpeLieSemSpeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Ue Spe Lie Sem Spe Niv</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ue Spe Lie Sem Spe Niv</em>' operation.
+	 * @see ContenuPedagogique.Niveau#UeSpeLieSemSpeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__UeSpeLieSemSpeNiv__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#SiSemPasSpe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Si Sem Pas Spe</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Si Sem Pas Spe</em>' operation.
+	 * @see ContenuPedagogique.Niveau#SiSemPasSpe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__SiSemPasSpe__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#SiSemAlors2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Si Sem Alors2</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Si Sem Alors2</em>' operation.
+	 * @see ContenuPedagogique.Niveau#SiSemAlors2(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__SiSemAlors2__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#SiSpeUeFon1SemPSpe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Si Spe Ue Fon1 Sem PSpe</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Si Spe Ue Fon1 Sem PSpe</em>' operation.
+	 * @see ContenuPedagogique.Niveau#SiSpeUeFon1SemPSpe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__SiSpeUeFon1SemPSpe__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#SiSpePasSem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Si Spe Pas Sem</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Si Spe Pas Sem</em>' operation.
+	 * @see ContenuPedagogique.Niveau#SiSpePasSem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__SiSpePasSem__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#NivNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Niv Nom Diff</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Niv Nom Diff</em>' operation.
+	 * @see ContenuPedagogique.Niveau#NivNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__NivNomDiff__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Niveau#UeLieSemMemeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Ue Lie Sem Meme Niv</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ue Lie Sem Meme Niv</em>' operation.
+	 * @see ContenuPedagogique.Niveau#UeLieSemMemeNiv(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getNiveau__UeLieSemMemeNiv__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link ContenuPedagogique.Specialite <em>Specialite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -953,6 +1182,16 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSpecialite_Description();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Specialite#UeSpeAM1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Ue Spe AM1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ue Spe AM1</em>' operation.
+	 * @see ContenuPedagogique.Specialite#UeSpeAM1(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSpecialite__UeSpeAM1__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link ContenuPedagogique.Ue <em>Ue</em>}'.
@@ -1075,6 +1314,26 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	EReference getUe_Programmations();
 
 	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Ue#UeSpe1Sem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Ue Spe1 Sem</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ue Spe1 Sem</em>' operation.
+	 * @see ContenuPedagogique.Ue#UeSpe1Sem(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUe__UeSpe1Sem__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Ue#UeCodeDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Ue Code Diff</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ue Code Diff</em>' operation.
+	 * @see ContenuPedagogique.Ue#UeCodeDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUe__UeCodeDiff__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link ContenuPedagogique.Enseignant <em>Enseignant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1149,6 +1408,17 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEnseignant_Bureau();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ContenuPedagogique.Enseignant#getGrade <em>Grade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Grade</em>'.
+	 * @see ContenuPedagogique.Enseignant#getGrade()
+	 * @see #getEnseignant()
+	 * @generated
+	 */
+	EAttribute getEnseignant_Grade();
 
 	/**
 	 * Returns the meta object for class '{@link ContenuPedagogique.Ressource <em>Ressource</em>}'.
@@ -1247,6 +1517,16 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	EAttribute getFormation_Nom();
 
 	/**
+	 * Returns the meta object for the '{@link ContenuPedagogique.Formation#FormNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Form Nom Diff</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Form Nom Diff</em>' operation.
+	 * @see ContenuPedagogique.Formation#FormNomDiff(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getFormation__FormNomDiff__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link ContenuPedagogique.Programmation <em>Programmation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1319,6 +1599,16 @@ public interface ContenuPedagogiquePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getTypePROGR();
+
+	/**
+	 * Returns the meta object for enum '{@link ContenuPedagogique.TypeGRADE <em>Type GRADE</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type GRADE</em>'.
+	 * @see ContenuPedagogique.TypeGRADE
+	 * @generated
+	 */
+	EEnum getTypeGRADE();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1484,6 +1774,78 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		EAttribute NIVEAU__NOM = eINSTANCE.getNiveau_Nom();
 
 		/**
+		 * The meta object literal for the '<em><b>Pas Spe Ue1 Sem</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___PAS_SPE_UE1_SEM__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__PasSpeUe1Sem__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Sem Lie Ue Meme Niv</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___SEM_LIE_UE_MEME_NIV__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__SemLieUeMemeNiv__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Ue Spe Lie Sem Spe Niv</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___UE_SPE_LIE_SEM_SPE_NIV__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__UeSpeLieSemSpeNiv__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Si Sem Pas Spe</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___SI_SEM_PAS_SPE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__SiSemPasSpe__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Si Sem Alors2</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___SI_SEM_ALORS2__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__SiSemAlors2__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Si Spe Ue Fon1 Sem PSpe</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___SI_SPE_UE_FON1_SEM_PSPE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__SiSpeUeFon1SemPSpe__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Si Spe Pas Sem</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___SI_SPE_PAS_SEM__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__SiSpePasSem__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Niv Nom Diff</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___NIV_NOM_DIFF__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__NivNomDiff__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Ue Lie Sem Meme Niv</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NIVEAU___UE_LIE_SEM_MEME_NIV__DIAGNOSTICCHAIN_MAP = eINSTANCE.getNiveau__UeLieSemMemeNiv__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link ContenuPedagogique.impl.SpecialiteImpl <em>Specialite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1516,6 +1878,14 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SPECIALITE__DESCRIPTION = eINSTANCE.getSpecialite_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Ue Spe AM1</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SPECIALITE___UE_SPE_AM1__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSpecialite__UeSpeAM1__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link ContenuPedagogique.impl.UeImpl <em>Ue</em>}' class.
@@ -1608,6 +1978,22 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		EReference UE__PROGRAMMATIONS = eINSTANCE.getUe_Programmations();
 
 		/**
+		 * The meta object literal for the '<em><b>Ue Spe1 Sem</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UE___UE_SPE1_SEM__DIAGNOSTICCHAIN_MAP = eINSTANCE.getUe__UeSpe1Sem__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Ue Code Diff</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UE___UE_CODE_DIFF__DIAGNOSTICCHAIN_MAP = eINSTANCE.getUe__UeCodeDiff__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link ContenuPedagogique.impl.EnseignantImpl <em>Enseignant</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1664,6 +2050,14 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ENSEIGNANT__BUREAU = eINSTANCE.getEnseignant_Bureau();
+
+		/**
+		 * The meta object literal for the '<em><b>Grade</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENSEIGNANT__GRADE = eINSTANCE.getEnseignant_Grade();
 
 		/**
 		 * The meta object literal for the '{@link ContenuPedagogique.impl.RessourceImpl <em>Ressource</em>}' class.
@@ -1744,6 +2138,14 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		EAttribute FORMATION__NOM = eINSTANCE.getFormation_Nom();
 
 		/**
+		 * The meta object literal for the '<em><b>Form Nom Diff</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FORMATION___FORM_NOM_DIFF__DIAGNOSTICCHAIN_MAP = eINSTANCE.getFormation__FormNomDiff__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link ContenuPedagogique.impl.ProgrammationImpl <em>Programmation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1804,6 +2206,16 @@ public interface ContenuPedagogiquePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TYPE_PROGR = eINSTANCE.getTypePROGR();
+
+		/**
+		 * The meta object literal for the '{@link ContenuPedagogique.TypeGRADE <em>Type GRADE</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ContenuPedagogique.TypeGRADE
+		 * @see ContenuPedagogique.impl.ContenuPedagogiquePackageImpl#getTypeGRADE()
+		 * @generated
+		 */
+		EEnum TYPE_GRADE = eINSTANCE.getTypeGRADE();
 
 	}
 
